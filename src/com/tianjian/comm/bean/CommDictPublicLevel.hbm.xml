@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.tianjian.comm.bean.CommDictPublicLevel" table="COMM_DICT_PUBLIC_LEVEL" >
+        <!--项目代码-->
+        <id name="itemCode" type="java.lang.String" column ="ITEM_CODE" length="32" >
+            <generator class="uuid.hex" />
+        </id>
+        <!--项目名称-->
+        <property name="itemName" type="java.lang.String" column ="ITEM_NAME" length="100" />
+        <!--输入码-->
+        <property name="inputCode" type="java.lang.String" column ="INPUT_CODE" length="8" />
+        <!--父项目代码-->
+         <many-to-one name="parentItemCodeObject" class="com.tianjian.comm.bean.CommDictPublicLevel" column="PARENT_ITEM_CODE" insert="false" update="false"/>
+        <property name="parentItemCode" type="java.lang.String" column ="PARENT_ITEM_CODE" length="32" />
+        <!--所在级别-->
+        <property name="classLevel" type="java.lang.Long" column ="CLASS_LEVEL" precision="5" scale="0" />
+        <!--序号-->
+        <property name="seqInLevel" type="java.lang.Long" column ="SEQ_IN_LEVEL" precision="11" scale="0" />
+        <!--字典类别-->
+        <many-to-one name="tableCodeObject" class="com.tianjian.comm.bean.CommDictPublicClass" column="TABLE_CODE" insert="false" update="false"/>
+        <property name="tableCode" type="java.lang.String" column ="TABLE_CODE" length="32" not-null="true" />
+        <!--备注-->
+        <property name="comments" type="java.lang.String" column ="COMMENTS" length="100" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,141 @@
+A:link {
+	COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #3333ff; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+BODY {
+	FONT-SIZE: 12pt; margin:0px; padding:0px;
+}
+.bodycolor {
+	BACKGROUND: url(bg.gif) #264989
+}
+.topbar {
+	FONT-SIZE: 9pt; background-image:url(../images/topbar.gif); background-color:#264989;
+}
+.topbar2 {
+	FONT-SIZE: 9pt; BACKGROUND: url(../images/menubg.gif) #264989
+}
+#Nav A {
+	DISPLAY: block; COLOR: #ffffff; POSITION: relative
+}
+#Nav A:hover {
+	COLOR: #ffffff;
+}
+.panel {
+	BACKGROUND: #ffffff
+}
+.timebar {
+	BACKGROUND: #ffffff
+}
+.statusbar {
+	BACKGROUND-IMAGE: url(statusbar.gif)
+}
+.col {
+	BACKGROUND-IMAGE: url(../images/col.gif)
+}
+.small {
+	FONT-SIZE: 9pt
+}
+.small1 {
+	FONT-SIZE: 9pt; COLOR: #ffffff
+}
+.big {
+	FONT-SIZE: 12pt
+}
+.big1 {
+	FONT-SIZE: 12pt; COLOR: #ffffff
+}
+.big2 {
+	FONT-SIZE: 18pt
+}
+.big3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #ffffff
+}
+.big4 {
+	COLOR: #ff0000
+}
+.verybig {
+	FONT-SIZE: 24pt
+}
+INPUT.SmallButton {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(button_back.gif); BORDER-LEFT: black 1px solid; CURSOR: hand; COLOR: #000066; BORDER-BOTTOM: #104a7b 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+INPUT.BigButton {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 12pt; BACKGROUND-IMAGE: url(button_back.gif); BORDER-LEFT: black 1px solid; CURSOR: hand; COLOR: #000066; BORDER-BOTTOM: #104a7b 1px solid; HEIGHT: 24px; TEXT-DECORATION: none
+}
+INPUT.SmallInput {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: black 1px solid; FONT-STYLE: normal; HEIGHT: 18px; FONT-VARIANT: normal
+}
+INPUT.SmallInput1 {
+	BORDER-RIGHT: 0px; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: black 1px solid; FONT-STYLE: normal; HEIGHT: 18px; FONT-VARIANT: normal
+}
+INPUT.BigInput {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; HEIGHT: 22px; FONT-VARIANT: normal
+}
+INPUT.BigInputMoney {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; HEIGHT: 22px; TEXT-ALIGN: right; FONT-VARIANT: normal
+}
+INPUT.SmallStatic {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #e0e0e0; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: black 1px solid; FONT-STYLE: normal; HEIGHT: 18px; FONT-VARIANT: normal
+}
+INPUT.BigStatic {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12pt; BACKGROUND: #e0e0e0; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; HEIGHT: 22px; FONT-VARIANT: normal
+}
+SELECT.BigSelect {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; HEIGHT: 22px; FONT-VARIANT: normal
+}
+SELECT.SmallSelect {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; HEIGHT: 18px; FONT-VARIANT: normal
+}
+SELECT.BigStatic {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12pt; BACKGROUND: #e0e0e0; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; HEIGHT: 22px; FONT-VARIANT: normal
+}
+SELECT.SmallStatic {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #e0e0e0; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: black 1px solid; FONT-STYLE: normal; HEIGHT: 18px; FONT-VARIANT: normal
+}
+TEXTAREA.BigInput {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 10pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; FONT-VARIANT: normal
+}
+TEXTAREA.BigStatic {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 10pt; BACKGROUND: #e0e0e0; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; FONT-VARIANT: normal
+}
+.TableControl {
+	BACKGROUND: #eff7ff
+}
+.TableHeader {
+	FONT-WEIGHT: bold; FONT-SIZE: 11pt; BACKGROUND: url(headerbg.gif) #d3e5fa; COLOR: #3d4f7f
+}
+.TableHeader1 {
+	BACKGROUND: url(button_back.gif) #d3e5fa; CURSOR: hand; COLOR: #000066
+}
+.TableHeader2 {
+	FONT-WEIGHT: bold; BACKGROUND: url(menubg.gif) #d3e5fa; CURSOR: hand; COLOR: #000066
+}
+.TableContent {
+	BACKGROUND: #e2e8fa
+}
+.TableData {
+	BACKGROUND: #ffffff
+}
+.TableLine1 {
+	BACKGROUND: #f3f3f3
+}
+.TableLine2 {
+	BACKGROUND: #ffffff
+}
+.TextColor1 {
+	COLOR: #ff6600
+}
+.TextColor2 {
+	COLOR: #ff0000
+}
+.top {
+	FONT-WEIGHT: bold; COLOR: #ff0000
+}

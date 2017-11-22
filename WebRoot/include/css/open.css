@@ -1,0 +1,77 @@
+html,body{
+	width:100%;
+	height:100%;
+}
+/*弹出框样式*/
+#bg_div{
+	background:url(../images/guanlibg.gif) no-repeat 0 0;
+	width:385px;
+	height:343px;
+	margin:0 auto;
+	position:absolut; top:100px;
+	padding:0;
+	z-index:100;
+}
+#body_div{
+	z-index:10;
+}
+#div_title{
+	width:10px;
+	height:10px;
+	float:right;
+	margin:9px 10px 0px 0px;
+	padding:0;
+	background:url(../images/guanli_close.gif) no-repeat 0 0;
+	cursor:pointer;
+
+}
+#div_pinyin{
+	width:360px;
+	height:270px;	
+	margin-top:38px;
+	margin-left:12px;
+}
+#guoji_table{
+	width:340px;
+	background-color:#828283;	
+}
+#guoji_table tr{	
+	background-color:#ffffff;
+	height:25px;
+	text-align:left;
+	padding-left:10px;
+	font-size:12px;
+}
+#guoji_table tr.trColor{
+	background-color:#F1F7FC;
+}
+table#guoji_table tr.pinyin_nav{
+	background:url(../images/bg.gif) repeat-x 0 0;
+	text-align:center;
+	padding:0;
+}
+.writediv{
+	font-size:12px;
+	text-align:left;
+	margin:0 auto;
+	width:360px;
+	height:30px;
+	line-height:30px;
+}
+.write_input{	
+	width:135px;	
+}
+#guoji_div{
+	width:360px;
+	height:240px;
+	overflow:auto;
+}
+
+/*按钮样式定义*/
+.button{
+	width:50px;
+	height:23px;
+	background:url(../images/tong.gif) no-repeat 0 0;
+	border:0;
+	cursor:hand;	
+}

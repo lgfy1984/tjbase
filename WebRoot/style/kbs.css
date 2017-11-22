@@ -1,0 +1,148 @@
+.kbm_font {
+	font-size: 12px;
+	font-family: 微软雅黑;
+}
+
+.kbm_body_div {
+	width: 100%;
+}
+
+.kbm_search_div {
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 30px;
+	background-color:rgb(251,251,251);
+}
+
+.kbm_input_item {
+	float: left;
+}
+
+.kbm_input_item .kbm_input_text {
+	margin-left: 10px;
+}
+
+.kbm_label {
+	text-align: center;
+	line-height: 30px;
+	width: 70px;
+	height: 30px;
+	color: #999999;
+	float: left;
+}
+
+.kbm_input_text {
+	width: 140px;
+	height: 26px;
+	line-height:26px;
+	margin-left: 10px;
+	padding-left: 3px;
+	padding-right: 3px;
+	border:1px solid rgb(218,218,218);
+}
+
+.kbm_link_button {
+	margin-left: 10px;
+	text-align: center;
+	line-height: 26px;
+	width: 80px;
+	color: white;
+	float: left;
+	text-decoration: none;
+	height:26px;
+	border:none;
+	background-image:url(../include/images/button_green1_s1.png);
+}
+
+.kbm_link_button span {
+	text-align: center;
+	color: white;
+}
+
+.kbm_link_button:hover {
+	background-color: #33CCFF;
+	color: white;
+}
+
+.kbm_tree_content_div {
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.kbm_tree_div {
+	/*position: relative;*/
+	width: 30%;
+	border: 1px #E1E1E1 solid;
+	float: left;
+}
+
+.kbm_content_div {
+	display: none;
+	width: 66%;
+	float: left;
+	margin-left: 10px;
+}
+
+.kbm_table {
+	width:100%;
+	background-color:rgb(225,225,225);
+	cell-spacing:1px;
+}
+
+.kbm_table_label {
+	text-align:right;
+	color:rgb(80,80,80);
+	font-size:10.5pt;
+	font-weight:300;
+	height:25px;
+	padding:5px;
+	background-color:rgb(251,251,251);
+}
+
+.kbm_td_text {
+	text-align:left;
+	color:rgb(80,80,80);
+	font-size:10.5pt;
+	font-weight:300;
+	height:25px;
+	background-color:#FFFFFF;
+	padding:5px;
+}
+
+.kbm_tr {
+	color: white;
+	margin-left: 10px;
+	height: 30px;
+	background-color: #0099FF;
+}
+
+.kbm_td1 {
+	text-indent: 2em; /*首行缩进*/
+	font-size: 12px;
+	font-family: 微软雅黑;
+	text-align:left;
+	color:rgb(80,80,80);
+	font-size:10.5pt;
+	font-weight:300;
+	height:25px;
+	background-color:rgb(251,251,251);
+	padding:5px;
+}
+
+.kbm_td2 {
+	text-indent: 2em;
+	font-size: 12px;
+	font-family: 微软雅黑;
+	text-align:left;
+	color:rgb(80,80,80);
+	font-size:10.5pt;
+	font-weight:500;
+	height:45px;
+	padding:5px;
+	background-color:#FFFFFF;
+}
+
+.kbm_content_title {
+	margin-bottom: 10px;
+}

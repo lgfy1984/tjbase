@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="securityConfigPublicClassForm" type="com.tianjian.security.struts.form.SecurityConfigPublicClassForm" />
+		<form-bean name="securityConfigPublicForm" type="com.tianjian.security.struts.form.SecurityConfigPublicForm" />
+		<form-bean name="securityConfigRolesForm" type="com.tianjian.security.struts.form.SecurityConfigRolesForm" />
+		<form-bean name="securityConfigMenusForm" type="com.tianjian.security.struts.form.SecurityConfigMenusForm" />
+		<form-bean name="loginForm" type="com.tianjian.security.struts.form.LoginForm" />
+		<form-bean name="loginSecondForm" type="com.tianjian.security.struts.form.LoginSecondForm" />
+		<form-bean name="securityRoleVsMenusForm" type="com.tianjian.security.struts.form.SecurityRoleVsMenusForm" />
+		<form-bean name="securityUserVsRolesForm" type="com.tianjian.security.struts.form.SecurityUserVsRolesForm" />
+		<form-bean name="SecurityStaffPasswordChangeForm" type="com.tianjian.security.struts.form.SecurityStaffPasswordChangeForm" />
+		<form-bean name="SecurityStaffPasswordInitForm" type="com.tianjian.security.struts.form.SecurityStaffPasswordInitForm" />
+		<form-bean name="SecuritySystemUsersForm" type="com.tianjian.security.struts.form.SecuritySystemUsersForm" />
+		<form-bean name="viewRegistCodeForm" type="com.tianjian.security.struts.form.ViewRegistCodeForm" />
+		<form-bean name="securityStaffBaseinfoForm" type="com.tianjian.security.struts.form.SecurityStaffBaseinfoForm" />
+		<form-bean name="SecurityUserPasswordChangeForm" type="com.tianjian.security.struts.form.SecurityUserPasswordChangeForm" />
+	    <form-bean name="SecurityUserPasswordInitForm" type="com.tianjian.security.struts.form.SecurityUserPasswordInitForm" />
+	    <form-bean name="FindPasswordForm" type="com.tianjian.security.struts.form.FindPasswordForm" />
+	    <form-bean name="securityXtSysLogForm" type="com.tianjian.security.struts.form.SecurityXtSysLogForm" />
+		<!-- <form-bean name="securityStaffSelectForm" type="com.tianjian.security.struts.form.SecurityStaffSelectForm" /> -->
+		
+		<!-- 系统参数start -->
+		<form-bean name="securityConfigParameterForm" type="com.tianjian.security.struts.form.SecurityConfigParameterForm"></form-bean> 
+  		<form-bean name="securityConfigParamClassForm" type="com.tianjian.security.struts.form.SecurityConfigParamClassForm"></form-bean>
+  		<form-bean name="securityConfigParamProjectForm" type="com.tianjian.security.struts.form.SecurityConfigParamProjectForm"></form-bean>
+		<!-- 系统参数end -->
+		
+		<!-- 权限对照 start-->
+		<form-bean name="SecurityUserVsRolesOpForm" type="com.tianjian.security.struts.form.SecurityUserVsRolesOpForm" />
+		<!-- 权限对照 end-->
+		
+		<!-- 数据权限start -->
+		<form-bean name="securityData" type="com.tianjian.security.struts.form.SecurityDataObjectTypeForm"></form-bean>
+		<form-bean name="securityDateVs" type="com.tianjian.security.struts.form.SecurityDataObjectVsRoleForm"></form-bean>
+    <form-bean name="menuTreeForm" type="com.tianjian.security.struts.form.MenuTreeForm" />
+		<!-- 数据权限end -->
+	</form-beans>
+	<global-exceptions />
+	<global-forwards>
+		<forward name="begin" path="/home/login.jsp" redirect="false" />
+		<forward name="noLogin" path="/home/nologin.jsp" />
+		<forward name="fail" path="/include/error/fail.jsp" />
+	</global-forwards>
+	<action-mappings>
+		<action path="/security/findPassword"  name="FindPasswordForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			 
+			<forward name="success" path="/include/success/success.jsp" /> 
+			<forward name="init" path="/security/securitysystemusers/find_password.jsp" />
+		</action>
+		<action path="/security/securityXtSysLog"  name="securityXtSysLogForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			 
+			<forward name="query" path="/security/securityxtsyslog/list.jsp" /> 
+			<forward name="detail" path="/security/securityxtsyslog/detail.jsp" />
+		</action>
+		<action path="/security/securityConfigPublicClass" name="securityConfigPublicClassForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/security/securityconfigpublicclass/list.jsp" />
+			<forward name="add" path="/security/securityconfigpublicclass/add.jsp" />
+			<forward name="update" path="/security/securityconfigpublicclass/update.jsp" />
+			<forward name="detail" path="/security/securityconfigpublicclass/detail.jsp" />
+			
+			
+			<forward name="queryDetail" path="/security/securityconfigpublicclass/listdetail.jsp" />
+		</action>
+		<action path="/security/securityConfigPublic" name="securityConfigPublicForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/security/securityconfigpublic/list.jsp" />
+			<forward name="add" path="/security/securityconfigpublic/add.jsp" />
+			<forward name="update" path="/security/securityconfigpublic/update.jsp" />
+			<forward name="detail" path="/security/securityconfigpublic/detail.jsp" />
+			
+			<forward name="init" path="/security/securityconfigpublic/securityconfigpublic.jsp" />
+			<forward name="search" path="/security/securityconfigpublic/securityconfigpublicdetail.jsp" />
+			
+			<forward name="queryDetail" path="/security/securityconfigpublic/listdetail.jsp" />
+		</action>
+		<action path="/security/securityConfigMenus" name="securityConfigMenusForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/security/securityconfigmenus/list.jsp" />
+			<forward name="add" path="/security/securityconfigmenus/add.jsp" />
+			<forward name="update" path="/security/securityconfigmenus/update.jsp" />
+			<forward name="detail" path="/security/securityconfigmenus/detail.jsp" />
+			
+			
+			<forward name="queryDetail" path="/security/securityconfigmenus/listdetail.jsp" />
+			<forward name="init" path="/security/securityconfigmenus/securityconfigmenus.jsp" />
+			<forward name="search" path="/security/securityconfigmenus/securityconfigmenusdetail.jsp" />
+			
+		</action>
+		<!--  角色定义表 -->
+		<action path="/security/securityConfigRoles" name="securityConfigRolesForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/security/securityconfigroles/list.jsp" />
+			<forward name="add" path="/security/securityconfigroles/add.jsp" />
+			<forward name="update" path="/security/securityconfigroles/update.jsp" />
+			<forward name="detail" path="/security/securityconfigroles/detail.jsp" />
+			
+			
+			<forward name="queryDetail" path="/security/securityconfigroles/listdetail.jsp" />
+		</action>
+		<!-- 登陆定义表 -->
+		<action path="/security/security_login" name="loginForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="ok" path="/main/topNav.jsp" />
+			<forward name="init" path="/home/login.jsp" />
+			
+			
+			<forward name="test" path="/main/testlogin.jsp" />
+		</action>
+		<!-- 按模块类别登陆定义表 -->
+		<action path="/security/security_loginSecond" name="loginSecondForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="ok" path="/main/topNav.jsp" />
+			<forward name="init" path="/home/login.jsp" />
+			<forward name="detail" path="/main/oa_menu.jsp" />
+			
+			
+			<forward name="menuontheright" path="/main/menuontheright.jsp" />
+			
+		</action>
+		<!-- 角色对应菜单 -->
+		<action path="/security/security_securityRoleVsMenus" input="/security/securityrolevsmenus/SecurityRoleVsMenus.jsp" name="securityRoleVsMenusForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="init" path="/security/securityrolevsmenus/SecurityRoleVsMenus.jsp" />
+			<forward name="search" path="/security/securityrolevsmenus/SecurityRoleVsMenusDetail.jsp" />
+			
+		</action>
+		<!-- 操作员对应角色 -->
+		<action path="/security/security_securityUserVsRoles" input="/security/securityuservsroles/SecurityUserVsRoles.jsp" name="securityUserVsRolesForm" type="org.springframework.web.struts.DelegatingActionProxy" scope="request">
+			<forward name="init" path="/security/securityuservsroles/SecurityUserVsRoles.jsp" />
+			
+			
+		</action>
+		<!-- 操作员密码修改 -->
+		<action path="/security/securityStaffPasswordChange" name="SecurityStaffPasswordChangeForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success" path="/security/securitystaffpasswordchange/success.jsp" />
+			<forward name="init" path="/security/securitystaffpasswordchange/init.jsp" />
+			<forward name="fail" path="/security/securitystaffpasswordchange/fail.jsp" />
+			
+			
+		</action>
+		<!-- 操作员密码初始化 -->
+		<action path="/security/securityStaffPasswordInit" name="SecurityStaffPasswordInitForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success" path="/security/securitystaffpasswordinit/success.jsp" />
+			<forward name="query" path="/security/securitystaffpasswordinit/list.jsp" />
+			<forward name="fail" path="/security/securitystaffpasswordinit/fail.jsp" />
+			
+			
+		</action>
+		<!-- 操作员登陆注册 -->
+		<action path="/security/SecuritySystemUsersRegist" name="SecuritySystemUsersForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="regist" path="/security/securitysystemusers/regist.jsp" />
+			
+		</action>
+		<!-- 操作员获取注册码 -->
+		<action path="/security/viewRegistCode" name="viewRegistCodeForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="viewInit" path="/security/securitysystemusers/viewcodeselect.jsp" />
+			<forward name="view" path="/security/securitysystemusers/viewcode.jsp" />
+			
+			
+		</action>
+		<!-- 操作员信息注册 -->
+		<action path="/security/securityStaffBaseinfo" name="securityStaffBaseinfoForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/security/securitystaffbaseinfo/list.jsp" />
+			<forward name="add" path="/security/securitystaffbaseinfo/add.jsp" />
+			<forward name="update" path="/security/securitystaffbaseinfo/update.jsp" />
+			<forward name="detail" path="/security/securitystaffbaseinfo/detail.jsp" />
+			<forward name="query4Web" path="/security/securitystaffbaseinfo/list4web.jsp" />
+			<forward name="queryDetail" path="/security/securitystaffbaseinfo/listdetail.jsp" />
+			<forward name="queryRegisterCode" path="/security/securitystaffbaseinfo/listregisterCode.jsp" />
+			<forward name="loginDetail" path="/security/securitystaffbaseinfo/logindetail.jsp" />
+		</action>
+		
+		<!-- 密码修改 -->
+		<action attribute="SecurityUserPasswordChangeForm" 
+			name="SecurityUserPasswordChangeForm" path="/securityUserPasswordChange" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success" path="/security/securityuserpasswordchange/success.jsp" />
+			<forward name="init" path="/security/securityuserpasswordchange/init.jsp" />  
+			<forward name="fail" path="/security/securityuserpasswordchange/fail.jsp" />   
+			<forward name="index" path="/web/index.jsp"></forward> 
+		</action>
+		<!-- 密码初始化 -->
+		<action attribute="SecurityUserPasswordInitForm" 
+			name="SecurityUserPasswordInitForm" path="/securityUserPasswordInit" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success" path="/security/securityuserpasswordinit/success.jsp" />
+			<forward name="init" path="/security/securityuserpasswordinit/init.jsp" />  
+			<forward name="fail" path="/security/securityuserpasswordinit/fail.jsp" />    
+		</action>
+		
+		<action path="/security/logout" type="com.tianjian.security.struts.action.LogoutAction" />
+	
+	
+	
+		<!-- 系统参数start -->
+		<action path="/security/securityConfigParameter" name="securityConfigParameterForm"  scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" 		path="/security/securityConfigParameter/list.jsp" />
+			<forward name="detail" 		path="/security/securityConfigParameter/detail.jsp" />
+			<forward name="update" 		path="/security/securityConfigParameter/update.jsp" />
+			<forward name="addInit" 	path="/security/securityConfigParameter/add.jsp" />
+			
+			<forward name="queryDetail" path="/security/securityConfigParameter/listdetail.jsp" />
+		</action>
+		<action path="/security/securityConfigParamClass" name="securityConfigParamClassForm"  scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" 		path="/security/securityConfigParamClass/list.jsp" />
+			<forward name="detail" 		path="/security/securityConfigParamClass/detail.jsp" />
+			<forward name="update" 		path="/security/securityConfigParamClass/update.jsp" />
+			<forward name="addInit"     path="/security/securityConfigParamClass/add.jsp" />
+			
+			<forward name="queryDetail" path="/security/securityConfigParamClass/listdetail.jsp" />
+		</action>
+		<action path="/security/securityConfigParamProject" name="securityConfigParamProjectForm"  scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" 		path="/security/securityConfigParamProject/list.jsp" />
+			<forward name="detail" 		path="/security/securityConfigParamProject/detail.jsp" />
+			<forward name="update" 		path="/security/securityConfigParamProject/update.jsp" />
+			<forward name="addInit"     path="/security/securityConfigParamProject/add.jsp" />
+			<forward name="queryDetail" path="/security/securityConfigParamProject/listdetail.jsp" />
+		</action>
+		<!-- 系统参数end -->
+		
+		<!-- 权限对照 start-->
+		<action path="/security/securityUserVsRolesOp" name="SecurityUserVsRolesOpForm"  scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" 		path="/security/securityuservsrolesop/list.jsp" />
+			<forward name="detail" 		path="/security/securityuservsrolesop/detail.jsp" />
+		</action>
+		<!-- 权限对照 end-->
+		
+		<!-- 数据权限start -->
+		<action path="/securityData" name="securityData" type="org.springframework.web.struts.DelegatingActionProxy" scope="request">
+			<forward name="addInit" path="/security/securityDataObject/add.jsp"></forward>
+			<forward name="query" path="/security/securityDataObject/list.jsp"></forward>
+			<forward name="detail" path="/security/securityDataObject/detail.jsp"></forward>
+			<forward name="update" path="/security/securityDataObject/update.jsp"></forward>
+			<forward name="queryDetail" path="/security/securityDataObject/listdetail.jsp"></forward>
+		</action>
+		<action path="/security/securityDateVs" name="securityDateVs" parameter="verbId" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/security/securityDataObjectVsRole/list.jsp"></forward>
+			<forward name="detail" path="/security/securityDataObjectVsRole/detail.jsp"></forward>
+			<forward name="update" path="/security/securityDataObjectVsRole/update.jsp"></forward>
+			<forward name="add" path="/security/securityDataObjectVsRole/add.jsp"></forward>
+			<forward name="adds" path="/security/securityDataObjectVsRole/adds.jsp"></forward>
+			<forward name="queryDetail" path="/security/securityDataObjectVsRole/listdetail.jsp"></forward>
+		</action>
+		<!-- 数据权限end -->
+		
+		<action path="/security/base"  scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+		</action>
+		<!-- 按模块类别登陆定义表 -->
+		<action attribute="loginSecondForm" name="loginSecondForm" path="/security_loginSeconds" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="ok" path="/main/index.jsp" />
+			<forward name="init" path="/home/login.jsp" />
+			<forward name="detail" path="/main/oa_menu.jsp" />
+		</action>
+    <action
+      attribute="menuTreeForm"
+      name="menuTreeForm"
+      path="/security/menuTree"
+      scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <forward name="init" path="/security/menutree/tree.jsp"></forward>
+    </action>
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,23 @@
+body{
+
+text-align:center;
+
+}
+body *{
+	font-size:14px;
+}
+.table{border:0; text-align:center; font-size:14px; background-color:#BFBFBF; width:500px; margin:10px auto;}
+
+.qian{background-color:#F7F7F7; width:100px; height:30px; text-align:right;}
+
+.hou{background-color:#ffffff; width:150px; height:30px;}
+.baocun{height:30; background-color:#ffffff;}
+.biaoti{height:25px; font-size:14px; color:#000000;
+
+
+background:url(../../../include/images/bg.gif) repeat-x;
+
+
+text-align:center; font-weight:bold;}
+.beizhu{background-color:#ffffff; width:400px; height:30px;}
+.kuandu{width:130px;}

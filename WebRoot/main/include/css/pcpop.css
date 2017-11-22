@@ -1,0 +1,51 @@
+.ul_pc_1{
+	width: 100%;
+	height: 60px;
+}
+.li_pc_1{
+	width: 100%;
+	height: 60px;
+	position: relative;
+	z-index: 99;
+}
+.li_pc_1 div{
+	cursor: pointer;
+}
+.li_pc_1 h3{
+	cursor: pointer;
+}
+.ul_pc_2{
+	margin: -3px 0 0 0;
+	padding: 20px 0 8px 0;
+	position: fixed;
+	display: none;
+	z-index: 1000;
+	width: 350px;
+	background-color: #98caeb;
+}
+.li_pc_2{
+	cursor: pointer;
+	color: #2e2e2e;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 8px 0 28px;
+	background: url("../images/ic.png") top left no-repeat;
+	margin: 5px 10px 5px 5px;
+}
+.li_pc_2 h4{
+	color: #e2e2e2;
+}
+.pc1_active{
+	background-color: #98caeb;
+}
+
+.pc_1_selected h3{
+	color: red;
+}
+.pc_2_selected{
+	background-color: #00ccff;
+}
+.pc_2_selected h4{
+	color: red;
+}

@@ -1,0 +1,132 @@
+body{ text-align:center; margin:10px auto; padding:0px;}
+ 
+ 
+.table{
+	background-color:#BFBFBF;
+	font-size:12px;
+	 
+} 
+
+.biaoti{
+	height:25px;
+	font-size:14px;
+	background-color:#F7F7F7; height:30px; text-align:right;
+	text-align:center;
+	font-weight:bold;
+	color:#000000;
+	 
+}
+.qian{background-color:#F7F7F7; height:30px; text-align:right;}
+
+.hou{background-color:#ffffff; height:30px; text-align:left; padding:0px 0px 0px 10px;}
+
+.first{
+	height:25px;
+	font-size:14px;
+	background-color:#F7F7F7; height:30px; text-align:left;
+	text-align:left;
+	font-weight:bold;
+	color:#000000;
+	
+}
+.second{
+ background-color:#ffffff; height:30px; text-align:left; padding:0px 0px 0px 10px;
+ font-size:14px;
+}
+ 
+
+
+.three{
+	height:25px;
+	font-size:14px;
+	background-color:#F7F7F7; height:30px; text-align:right;
+	text-align:left;
+	font-weight:bold;
+	color:#000000;
+	
+}
+
+*{
+	font-family:Arial;
+	font-size:12px;
+}
+
+
+#dvh1
+{
+	width:750;
+	overflow:auto;
+	margin:0 auto;
+}
+
+.dataTable {
+	border:none;
+	width:85%;
+	margin:0 auto;
+}
+.dataTable td{
+}
+.dataTable caption{
+	font-size:14px;
+	text-align:center;
+	border-bottom:2px solid #000;
+	border-bottom-width:5%;
+	margin-top:5px;
+	padding:5px 0 3px;
+}
+.dataTable caption span{
+	font-family:Verdana, Geneva, sans-serif;
+}
+.dataTable tr{
+	height:19px;
+}
+.dataTable th{
+	border-bottom:1px solid #000;
+	height:25px;
+}
+.dataTable .reportNum{
+	text-align:right;
+}
+.dataTable .total td{
+	border-top:1px solid #000;
+	height:25px;
+	font-weight:bold;
+}
+.dataTable tfoot td{
+	border-top:2px solid #000;
+	height:25px;
+	text-align:center;
+}
+.dataTable2 {
+	border:none;
+	width:80%;
+	margin:0 auto;
+}
+.dataTable2 tr{
+	height:19px;
+}
+.dataTable2 td{
+	padding:0 10px;
+}
+.dataTable2 thead th{
+	border-bottom:1px solid #000;
+	height:25px; 
+}
+.dataTable2 td{
+	border-left:5px;
+}
+.dataTable2 .reportNum{
+	text-align:right;
+}
+.dataTable2 .total td{
+	border-top:1px solid #000;
+	height:25px;
+	font-weight:bold;
+}
+.dataTable2 tfoot td{
+	border-top:2px solid #000;
+	height:25px;
+	text-align:center;
+}
+
+

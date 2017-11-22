@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+	</form-beans>
+	<action-mappings/>	
+	<message-resources key="main"  parameter="conf.main.Init" ></message-resources>
+	<message-resources key="test" parameter="conf.test" ></message-resources>
+	<message-resources key="a"  parameter="conf.Init" ></message-resources>
+	<message-resources key="conf.comm.comm" parameter="conf.comm.CommMessage1xiac" ></message-resources>
+	<message-resources key="conf.main.main"  parameter="conf.main.main" ></message-resources>
+	<message-resources key="js"  parameter="conf.js.Init" ></message-resources>
+	<message-resources key="conf.Init" parameter="conf.Init" ></message-resources>
+	<message-resources key="conf.include.include" parameter="conf.include.include" ></message-resources>
+	<message-resources key="conf.security.security" parameter="conf.security.security" ></message-resources>
+	<message-resources key="conf.comm.Comm" parameter="conf.comm.Comm" ></message-resources>
+	<message-resources key="conf.comm.CommMessageguoh" parameter="conf.comm.CommMessageguoh" ></message-resources>
+	<message-resources key="conf.home.Message" parameter="conf.home.Message" ></message-resources>
+	<message-resources key="conf.comm.CommMessage" parameter="conf.comm.CommMessage" ></message-resources>
+    <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+    <message-resources key="hsp.hspLocale" parameter="conf.hsp.HspLocale" />
+    <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+  	<message-resources key="security" parameter="conf.security.securityInit"></message-resources>
+	<message-resources key="comm.comIHE" parameter="conf.comm.CommIHE"></message-resources>
+</struts-config>
+

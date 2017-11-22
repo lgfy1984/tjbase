@@ -1,0 +1,139 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,br,pre,form,fieldset,input,textarea,p,blockquote,th,td{ margin:0; padding:0}
+body {margin: 0px;} 
+body,td,th {font-family: 宋体; font-size: 14px; color: #333; line-height:24px}
+a:link {color: #333; text-decoration: none}
+a:visited { text-decoration: none;color: #333}
+a:hover {text-decoration:underline; color: #e10000}
+a:active {text-decoration: none;color: #333}
+img,a img{ border:none; margin:0; padding:0;}
+ul{list-style:none;margin:0 auto;padding:0}
+ul li{vertical-align:bottom}
+li{ display:inline-block;}
+.clear{clear:both; line-height:0px; height:0px; font-size:0px}
+a:link {color:#333; text-decoration:none;}
+a:visited {color:#333; text-decoration:none;}
+a:hover {color:#c50c0c; text-decoration:none;}
+a:active {}
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.box{ width:980px; margin:50px auto;}
+.part_title{ height:30px;  padding:0px 5px; line-height:30px; background:url(nav_bg1.gif) repeat-x bottom}
+.part_title h3{font-size:14px;}
+.moer{ font-size:12px; float:right;}
+/***********/
+.code_content{ border:1px solid #ccc; padding:8px 12px; _padding:8px 6px; background:#f8f8f8; zoom:1}
+.code_content_box{ padding:10px 0px; height:330px; overflow:hidden;}
+.code_content a:active{ test:expression(target="_blank");}
+.code_content li{ width:219px; height:160px; float:left; overflow:hidden; padding:2px 8px 0px 8px;}
+.code_content img{ width:215px; height:108px; padding:3px; border:#ddd 1px solid;}
+.code_content a:hover img{ padding:3px; border:#ff0000 1px solid;}
+.code_content p{height:20px; line-height:20px; text-align:center}
+.code_time{ font-style:normal; text-align:center; color:#aaa;}
+/* panel-popup */
+#panel-popup {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	z-index: 888;
+}
+#panel-popup .outerbox,
+#panel-popup .outerbox .innerbox,
+#panel-popup .footbox,
+#panel-popup .footbox div {
+	background-image: url(../images/panel_popup_bg.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#panel-popup .outerbox .innerbox {
+	height: 100%;
+	padding: 15px 20px 0 0;
+	margin: 0 0 0 10px;
+	background-position: right top;
+}
+#panel-popup .footbox {
+	background-position: left bottom;
+}
+#panel-popup .footbox div {
+	height: 10px;
+	overflow: hidden;
+	font: 1px/1px Arial;
+	margin: 0 0 0 10px;
+	background-position: right bottom;
+}
+#panel-popup .overlay {
+	position: absolute;
+	top: 7px;
+	left: 20px;
+	width: 11px;
+	height: 1px;
+	overflow: hidden;
+	background: #FFF;
+}
+#panel-popup .close {
+	position: absolute;
+	top: 10px;
+	right: 4px;
+	width: 19px;
+	height: 19px;
+	overflow: hidden;
+	cursor: pointer;
+}
+#panel-popup .button {
+	width: 64px;
+	height: 23px;
+	line-height: 23px;
+	margin: 5px 0 0;
+	border: 0;
+	background: url(../images/btn_white.gif) no-repeat left top;
+	font-size: 12px;
+	color: #333;
+}
+
+/* panel-popup sharebox */
+
+#panel-popup .sharebox {}
+#panel-popup .sharebox li {float: left;}
+#panel-popup .sharebox li a {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	padding: 0 0 0 28px;
+	margin: 8px 0px 0px 10px;
+	background-image: url(../images/ic.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	color: #666;
+}
+#panel-popup .sharebox li a:hover {color: #c50c0c;}
+#panel-popup .sharebox li a.tsina {background-position: 0 0;}
+#panel-popup .sharebox li a.kaixin {background-position: 0 -40px;}
+#panel-popup .sharebox li a.renren {background-position: 0 -80px;}
+#panel-popup .sharebox li a.qzone {background-position: 0 -120px;}
+#panel-popup .sharebox li a.jianghu {background-position: 0 -560px;}
+#panel-popup .sharebox li a.douban {background-position: 0 -260px;}
+#panel-popup .sharebox li a.googlebkmk {background-position: 0 -20px;}
+#panel-popup .sharebox li a.cangbaidu {background-position: 0 -40px;}
+/* panel-popup panel-comment-box */
+.panel-comment-box {margin:5px 0 0;}
+.panel-comment-box td {padding:2px 5px;}
+.panel-comment-box #comment,
+.panel-comment-box #checkcode {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #D5D5D5;
+	border-right-color: #DEDEDE;
+	border-bottom-color: #DEDEDE;
+}
+.panel-comment-box #comment {width: 250px;}
+.panel-comment-box .button {margin: 0;}
+.panel-comment-box img {vertical-align: middle; cursor: pointer;}

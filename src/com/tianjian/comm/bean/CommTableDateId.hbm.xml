@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.tianjian.comm.bean.CommTableDateId" table="COMM_TABLE_DATE_ID" >
+  <id name="id" type="java.lang.Long">
+            <column name="ID" precision="11" scale="0" />
+            <generator class="assigned" />
+        </id>
+<!--表名-->
+<property name="tableName" type="java.lang.String" column ="TABLE_NAME" length="30" />
+<!--列名-->
+<property name="columnName" type="java.lang.String" column ="COLUMN_NAME" length="30" />
+<!--日期-->
+<property name="seqDate" type="java.util.Date" column ="SEQ_DATE" length="7" />
+<!--序号-->
+<property name="idvalue" type="java.lang.Long" column ="IDVALUE" precision="11" scale="0" />
+<!--备注-->
+<property name="comments" type="java.lang.String" column ="COMMENTS" length="40" />
+</class>
+</hibernate-mapping>

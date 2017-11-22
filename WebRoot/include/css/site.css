@@ -1,0 +1,13 @@
+#adv {
+	RIGHT: 20px; COLOR: #000; POSITION: absolute; TOP: 2.5em
+}
+#adv:visited {
+	COLOR: #000
+}
+DIV.maxmin {
+	RIGHT: 0px; BACKGROUND: #e6e9ee; BORDER-LEFT: #ddd 1px solid; WIDTH: 8px; BOTTOM: 0px; POSITION: fixed; TOP: 0px
+}
+
+#min_bar {
+	DISPLAY: none
+}

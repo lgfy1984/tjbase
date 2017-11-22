@@ -1,0 +1,38 @@
+/* CSS Document */
+#spanOutput{ position: absolute;
+top: 0px;
+left: 0px;
+width: 550px;
+z-index: 101;
+background-color: #ffffff;
+border: 1px solid #000000;
+padding-left: 2px;
+overflow: visible;
+display: none;
+font-family:Arial;
+font-size:12px;
+color:#333;
+}
+#buildTable thead{
+	text-align: center;
+	
+}
+#buildTable tr{
+	border: 0px;
+}
+#buildTable td{
+	text-align: left;
+	border: 0px;
+	height: 12px;
+	line-height:18px;
+	padding-left:1px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin-left: 0px;
+}
+.spanNormalElement{ background: #ffffff; }
+.spanHighElement{ background: blue;
+cursor: pointer; }
+
+

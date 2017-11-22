@@ -1,0 +1,67 @@
+
+.lab_item_name{
+ 	text-decoration: underline;
+ }
+.lab_item_name:HOVER{
+ 	cursor: pointer;
+ 	color: #009DD9;
+ }
+.base_info_table{
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+.base_info_table td{
+	position:relative;
+	vertical-align: top;
+	text-align:left;
+}
+.table_title{
+	width: 10%;
+}
+
+.medicine_content_table{
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+.medicine_content_table td{
+	border: 2px solid black;
+	position:relative;
+	vertical-align: top;
+}
+.medicine_list_table td{
+	border: none;
+}
+.medicine_content_table td.td_no_top_line{
+	border-top:none; 
+}
+.medicine_content_table td.td_no_bottom_line{
+	border-bottom:none; 
+}
+.sign_td span{
+	margin-left: 10%;
+}
+
+/*New style added*/
+.div_width_100 .div_left #right_button,.div_width_100 .div_left #left_button{
+	border:none;
+	background:none;
+	background-image: url(../include/images/arrow_right.png);
+	background-repeat:no-repeat;
+	cursor:pointer;
+	height:30px;
+	width:30px;
+	text-align:left;
+	padding:0px;
+	font-size:0px;
+	margin-top:200px;
+	margin-left:20px;
+	outline:none;
+    
+  }
+ .div_width_100 .div_left #left_button{
+	background-image: url(../include/images/arrow_left.png);
+	margin-left:auto;
+	margin-top:190px;
+	margin-right:20px;
+	
+ }

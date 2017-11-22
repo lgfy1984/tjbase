@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	
+	<!--***********************国家字典**********************start*************************-->
+	<bean name="/comm/commConfigCountry" class="com.tianjian.comm.struts.action.CommConfigCountryAction" singleton="false">
+		<property name="commConfigCountryService">
+			<ref bean="CommConfigCountryService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="CommConfigCountryService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigCountryServiceImpl">
+				<property name="commConfigCountryDAO">
+					<ref bean="CommConfigCountryDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigCountryDAO" class="com.tianjian.comm.dao.hibernate.CommConfigCountryDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--***********************乡镇字典**********************start*************************-->
+	<bean name="/comm/commConfigLocationTown" class="com.tianjian.comm.struts.action.CommConfigLocationTownAction" singleton="false">
+		<property name="service">
+			<ref bean="commConfigLocationTownService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="commConfigLocationTownService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.ICommConfigLocationTownServiceImpl">
+				<property name="commConfigLocationTownDAO">
+					<ref bean="commConfigLocationTownDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigLocationTownDAO" class="com.tianjian.comm.dao.hibernate.CommConfigLocationTownDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--***********************行政村字典**********************start*************************-->
+	<bean name="/comm/commConfigLocationVillage" class="com.tianjian.comm.struts.action.CommConfigLocationVillageAction" singleton="false">
+		<property name="service">
+			<ref bean="commConfigLocationVillageService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="commConfigLocationVillageService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigLocationVillageServiceImpl">
+				<property name="commConfigLocationVillageDAO">
+					<ref bean="commConfigLocationVillageDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigLocationVillageDAO" class="com.tianjian.comm.dao.hibernate.CommConfigLocationVillageDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<!--***********************行政组字典**********************start*************************-->
+	<bean name="/comm/commConfigLocationGroup" class="com.tianjian.comm.struts.action.CommConfigLocationGroupAction" singleton="false">
+		<property name="service">
+			<ref bean="commConfigLocationGroupService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="commConfigLocationGroupService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigLocationGroupServiceImpl">
+				<property name="commConfigLocationGroupDAO">
+					<ref bean="commConfigLocationGroupDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigLocationGroupDAO" class="com.tianjian.comm.dao.hibernate.CommConfigLocationGroupDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+</beans>

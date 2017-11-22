@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="autodetect">
+	<!--***********************************************************************************************************-->
+	<!--Action中注入接口-->
+	<!-- *****************功能模块类别定义 *********start*************************************** -->
+	<bean name="/security/securityConfigPublicClass" class="com.tianjian.security.struts.action.SecurityConfigPublicClassAction" singleton="false">
+		<property name="securityConfigPublicClassService">
+			<ref bean="SecurityConfigPublicClassService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="SecurityConfigPublicClassService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityConfigPublicClassServiceImpl">
+				<property name="securityConfigPublicClassDAO">
+					<ref bean="SecurityConfigPublicClassDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="SecurityConfigPublicClassDAO" class="com.tianjian.security.dao.hibernate.SecurityConfigPublicClassDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- ********** 功能模块类别定义 **********end********************************************* -->
+	<!-- ***************** 功能模块定义 *********start********************************************** -->
+	<bean name="/security/securityConfigPublic" class="com.tianjian.security.struts.action.SecurityConfigPublicAction" singleton="false">
+		<property name="securityConfigPublicService">
+			<ref bean="SecurityConfigPublicService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="SecurityConfigPublicService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityConfigPublicServiceImpl">
+				<property name="securityConfigPublicDAO">
+					<ref bean="SecurityConfigPublicDAO" />
+				</property>
+				<property name="securityConfigPublicClassDAO">
+					<ref bean="SecurityConfigPublicClassDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="SecurityConfigPublicDAO" class="com.tianjian.security.dao.hibernate.SecurityConfigPublicDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- ***************** 功能模块定义 **********end********************************************* -->
+	<!-- ***************** 菜单定义表  *********start**************************************** -->
+	<bean name="/security/securityConfigMenus" class="com.tianjian.security.struts.action.SecurityConfigMenusAction" singleton="false">
+		<property name="securityConfigMenusService">
+			<ref bean="SecurityConfigMenusService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="SecurityConfigMenusService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityConfigMenusServiceImpl">
+				<property name="securityConfigMenusDAO">
+					<ref bean="SecurityConfigMenusDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="SecurityConfigMenusDAO" class="com.tianjian.security.dao.hibernate.SecurityConfigMenusDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- *********** 菜单定义表  **********end********************************************* -->
+	<!-- ***************** 角色定义表 *********start******************************************** -->
+	<bean name="/security/securityConfigRoles" class="com.tianjian.security.struts.action.SecurityConfigRolesAction" singleton="false">
+		<property name="securityConfigRolesService">
+			<ref bean="SecurityConfigRolesService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="SecurityConfigRolesService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityConfigRolesServiceImpl">
+				<property name="securityConfigRolesDAO">
+					<ref bean="SecurityConfigRolesDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="SecurityConfigRolesDAO" class="com.tianjian.security.dao.hibernate.SecurityConfigRolesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- ************* 角色定义表 **********end********************************************* -->
+	<!-- ***************** 角色对应菜单 *********start********************************************** -->
+	<bean name="/security/security_securityRoleVsMenus" class="com.tianjian.security.struts.action.SecurityRoleVsMenusAction">
+		<property name="service">
+			<ref bean="securityRoleVsMenusService" />
+		</property>
+	</bean>
+
+	<!-- ***************** 角色对应菜单 *********start********************************************** -->
+	<bean id="securityRoleVsMenusService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityRoleVsMenusServiceImpl">
+				<property name="dao">
+					<ref bean="securityRoleVsMenusDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="securityRoleVsMenusDao" class="com.tianjian.security.dao.hibernate.SecurityRoleVsMenusDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- ***************** 角色对应菜单 **********end********************************************* -->
+	<!--************************范剑峰的记录结束************************************************************************-->
+		<!-- ***************** 操作员密码修改 *********start********************************************** -->
+	<bean name="/security/securityStaffPasswordChange" class="com.tianjian.security.struts.action.SecurityStaffPasswordChangeAction">
+		<property name="service">
+			<ref bean="securityStaffPasswordChangeService" />
+		</property>
+	</bean>
+	<bean id="securityStaffPasswordChangeService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityStaffPasswordChangeServiceImpl">
+				<property name="dao">
+					<ref bean="securityStaffPasswordChangeDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="securityStaffPasswordChangeDAO" class="com.tianjian.security.dao.hibernate.SecurityStaffPasswordChangeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- ***************** 操作员密码修改 **********end********************************************* -->
+	<!-- ***************** 操作员密码初始化 *********start********************************************** -->
+	<bean name="/security/securityStaffPasswordInit" class="com.tianjian.security.struts.action.SecurityStaffPasswordInitAction">
+		<property name="service">
+			<ref bean="securityStaffPasswordInitService" />
+		</property>
+	</bean>
+	<bean id="securityStaffPasswordInitService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityStaffPasswordInitServiceImpl">
+				<property name="dao">
+					<ref bean="securityStaffPasswordInitDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="securityStaffPasswordInitDAO" class="com.tianjian.security.dao.hibernate.SecurityStaffPasswordInitDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- ***************** 操作员密码初始化 **********end********************************************* -->
+	<!--************************李晓丁的记录结束************************************************************************-->
+	<!-- ***************** 操作员对应角色 *********start********************************************** -->
+	<bean name="/security/security_securityUserVsRoles" class="com.tianjian.security.struts.action.SecurityUserVsRolesAction">
+		<property name="service">
+			<ref bean="securityUserVsRolesService" />
+		</property>
+		
+	</bean>
+	<bean id="securityUserVsRolesService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityUserVsRolesServiceImpl">
+				<property name="dao">
+					<ref bean="securityUserVsRolesDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="securityUserVsRolesDao" class="com.tianjian.security.dao.hibernate.SecurityUserVsRolesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- ***************** 操作员对应角色 **********end********************************************* -->
+	<!-- ***************** 登陆操作 *********start********************************************** -->
+	<bean name="/security/security_login" class="com.tianjian.security.struts.action.LoginAction">
+		<property name="service">
+			<ref bean="loginService" />
+		</property>
+		<property name="securityStaffAliveAccessService">
+			<ref bean="securityStaffAliveAccessService" />
+		</property>
+	</bean>
+	<bean id="loginService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.LoginServiceImpl">
+				<property name="loginDAO">
+					<ref bean="loginDAO" />
+				</property>
+				<property name="securityLicenseDAO">
+					<ref bean="SecurityLicenseDAO" />
+				</property>
+				
+			</bean>
+		</property>
+	</bean>
+	<bean id="loginDAO" class="com.tianjian.security.dao.hibernate.LoginDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- ***************** 登陆操作 **********end********************************************* -->
+	<!-- ***************** 登陆模块类别之后操作 *********start********************************************** -->
+	<bean name="/security/security_loginSecond" class="com.tianjian.security.struts.action.LoginSecondAction">
+		<property name="service">
+			<ref bean="loginSecondService" />
+		</property>
+	</bean>
+	<bean id="loginSecondService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.LoginSecondServiceImpl">
+				<property name="loginSecondDAO">
+					<ref bean="loginSecondDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="loginSecondDAO" class="com.tianjian.security.dao.hibernate.LoginSecondDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- ***************** 登陆模块类别之后操作 **********end********************************************* -->
+	<!--************************曾川的记录结束************************************************************************-->
+	<!-- ***************** 注册证 *********start********************************************** -->
+	<!-- Dzenall==start==securityLicense -->
+	<bean id="SecurityLicenseDAO" class="com.tianjian.security.dao.hibernate.SecurityLicenseDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- ***************** 注册证 **********end********************************************* -->
+	<!-- ***************** 操作员注册 *********start********************************************** -->
+	<bean name="/security/SecuritySystemUsersRegist" class="com.tianjian.security.struts.action.SecuritySystemUsersAction" singleton="false">
+		<property name="service">
+			<ref bean="SecuritySystemUsersRegistService" />
+		</property>
+	</bean>
+	<bean id="SecuritySystemUsersRegistService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecuritySystemUsersServiceImpl">
+				<property name="securitySystemUsersDAO">
+					<ref bean="securitySystemUsersRegistDAO" />
+				</property>
+				<property name="securityLicenseDAO">
+					<ref bean="SecurityLicenseDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="securitySystemUsersRegistDAO" class="com.tianjian.security.dao.hibernate.SecuritySystemUsersDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- ******************操作员注册*********end********************************************* -->
+	<!-- ******************查看操作人员注册码*********start********************************************** -->
+	<bean name="/security/viewRegistCode" class="com.tianjian.security.struts.action.ViewRegistCodeAction" singleton="false">
+		<property name="service">
+			<ref bean="ViewRegistCodeService" />
+		</property>
+	</bean>
+	<bean id="ViewRegistCodeService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.ViewRegistCodeServiceImpl">
+				<property name="securitySystemUsersDAO">
+					<ref bean="securitySystemUsersRegistDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- ******************查看操作人员注册码*********end********************************************* -->
+	<!--************************曾德全的记录结束************************************************************************-->
+	
+	<!-- ******************操作人员维护*********start********************************************* -->
+	<bean name="/security/securityStaffBaseinfo" class="com.tianjian.security.struts.action.SecurityStaffBaseinfoAction">
+		<property name="service">
+			<ref bean="securityStaffBaseinfoService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="securityStaffBaseinfoService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityStaffBaseinfoServiceImpl">
+				<property name="securityStaffBaseinfoDAO">
+					<ref bean="securityStaffBaseinfoDAO" />
+				</property>
+				<!-- Dzenall==start== -->
+				<property name="securityLicenseDAO">
+					<ref bean="SecurityLicenseDAO" />
+				</property>
+				<!-- Dzenall==end== -->
+			</bean>
+		</property>
+	</bean>
+	<bean id="securityStaffBaseinfoDAO" class="com.tianjian.security.dao.hibernate.SecurityStaffBaseinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- ******************操作人员维护*********end********************************************* -->
+
+	<!--密码找回 -->
+	<bean name="/security/findPassword" class="com.tianjian.security.struts.action.FindPasswordAction">
+		<property name="findPasswordService">
+			<ref local="findPasswordService"/>
+		</property>
+	</bean>
+	<bean id="findPasswordService" parent="BaseTxService">	
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.FindPasswordServiceImpl">
+				<property name="findPasswordDAO">
+					<ref local="findPasswordDAO"/>
+				</property>					
+			</bean>
+		</property>
+	</bean>	
+	<bean id="findPasswordDAO" class="com.tianjian.security.dao.hibernate.FindPasswordDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+<!-- 系统参数归属项目字典维护 -->
+	<bean name="/security/securityConfigParamProject" class="com.tianjian.security.struts.action.SecurityConfigParamProjectAction">
+		<property name="securityConfigParamProjectService">
+			<ref local="securityConfigParamProjectService"/>
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="securityConfigParamProjectService" parent="BaseTxService">	
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityConfigParamProjectServiceImpl">
+				<property name="securityConfigParamProjectDAO">
+					<ref local="securityConfigParamProjectDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>	
+	<bean id="securityConfigParamProjectDAO" class="com.tianjian.security.dao.hibernate.SecurityConfigParamProjectDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	
+<!-- 系统参数字典维护 -->
+	<bean name="/security/securityConfigParameter" class="com.tianjian.security.struts.action.SecurityConfigParameterAction">
+		<property name="securityConfigParameterService">
+			<ref local="securityConfigParameterService"/>
+		</property>
+	</bean>
+	<bean id="securityConfigParameterService" parent="BaseTxService">
+		<property name="target">
+			<bean
+				class="com.tianjian.security.business.service.SecurityConfigParameterServiceImpl">
+				<property name="securityConfigParameterDAO">
+					<ref bean="securityConfigParameterDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="securityConfigParameterDAO"
+		class="com.tianjian.security.dao.hibernate.SecurityConfigParameterDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+<!-- 系统参数类别字典维护 -->
+	<bean name="/security/securityConfigParamClass" class="com.tianjian.security.struts.action.SecurityConfigParamClassAction">
+		<property name="securityConfigParamClassService">
+			<ref local="securityConfigParamClassService"/>
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="securityConfigParamClassService" parent="BaseTxService">	
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityConfigParamClassServiceImpl">
+				<property name="securityConfigParamClassDAO">
+					<ref local="securityConfigParamClassDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>	
+	<bean id="securityConfigParamClassDAO" class="com.tianjian.security.dao.hibernate.SecurityConfigParamClassDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	
+	<!-- 访问记录开始 -->
+	<bean name="/security/base" class="com.tianjian.security.struts.action.BaseAction">
+		<property name="securityStaffAliveAccessService">
+			<ref bean="securityStaffAliveAccessService"/>
+		</property>
+	</bean>
+	<bean id="securityStaffAliveAccessService" parent="BaseTxService">
+		<property name="target">
+			<bean
+				class="com.tianjian.security.business.service.SecurityStaffAliveAccessServiceImpl">
+				<property name="securityStaffAliveAccessDAO">
+					<ref bean="securityStaffAliveAccessDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="securityStaffAliveAccessDAO"
+		class="com.tianjian.security.dao.hibernate.SecurityStaffAliveAccessDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 访问记录开始 -->
+	<!-- 权限对照开始 -->
+	<bean name="/security/securityUserVsRolesOp" class="com.tianjian.security.struts.action.SecurityUserVsRolesOpAction">
+		<property name="securityUserVsRolesOpService">
+			<ref local="securityUserVsRolesOpService"/>
+		</property>
+	</bean>
+	<bean id="securityUserVsRolesOpService" parent="BaseTxService">	
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityUserVsRolesOpServiceImpl">
+				<property name="securityUserVsRolesOpDAO">
+					<ref local="securityUserVsRolesOpDAO"/>
+				</property>
+				<property name="commonDAO">
+					<ref bean="CommonDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>	
+	<bean id="securityUserVsRolesOpDAO" class="com.tianjian.security.dao.hibernate.SecurityUserVsRolesOpDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 权限对照结束 -->
+	
+	<!-- 数据权限开始 -->
+	<bean name="/securityData" class="com.tianjian.security.struts.action.SecurityDataObjectTypeAction">
+		<property name="securityDataObjectTypeService">
+			<ref local="securityDataObjectTypeService"/>
+		</property>
+	</bean>
+	<bean name="/security/securityDateVs" class="com.tianjian.security.struts.action.SecurityDataObjectVsRoleAction">
+			<property name="securityDataObjectVsRoleService">
+				<ref local="securityDataObjectVsRoleService"/>
+			</property>
+	</bean>
+
+	<bean id="securityDataObjectTypeService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityDataObjectTypeService">
+				<property name="securityDataObjectTypeDAO">
+					<ref local="securityDataObjectTypeDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="securityDataObjectVsRoleService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityDataObjectVsRoleServiceImpl">
+				<property name="securityDataObjectVsRoleServiceDAO">
+					<ref local="securityDataObjectVsRoleDAO" />
+				</property>
+				<property name="commondao">
+					<ref bean="CommonDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="securityDataObjectTypeDAO" class="com.tianjian.security.dao.hibernate.SecurityDataObjectTypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="securityDataObjectVsRoleDAO" class="com.tianjian.security.dao.hibernate.SecurityDataObjectVsRoleDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<!-- 数据权限结束 -->
+	<!-- 错误日志 开始-->
+	<bean name="/security/securityXtSysLog" class="com.tianjian.security.struts.action.SecurityXtSysLogAction" singleton="false">
+		<property name="xtsyslogService">
+			<ref bean="SecurityXtSysLogService" />
+		</property>
+	</bean>
+	<bean id="SecurityXtSysLogService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.SecurityXtSysLogServiceImpl">
+				<property name="xtsyslogDAO">
+					<ref bean="SecurityXtSysLogDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="SecurityXtSysLogDAO" class="com.tianjian.security.dao.hibernate.SecurityXtSysLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 错误日志 结束-->
+	<!-- 模块类别、模块、菜单树状图 开始-->
+	<bean name="/security/menuTree" class="com.tianjian.security.struts.action.MenuTreeAction" singleton="false">
+		<property name="menuTreeService">
+			<ref bean="menuTreeService" />
+		</property>
+	</bean>
+	
+	<bean name="menuTreeService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.MenuTreeServiceImpl">
+				<property name="commonDAO">
+					<ref bean="CommonDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- 模块类别、模块、菜单树状图 结束-->
+</beans>

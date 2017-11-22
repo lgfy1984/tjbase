@@ -1,0 +1,14 @@
+/META-INF/
+/applicationContext-basecommon.xml
+/applicationContext-basehsp.xml
+/applicationContext-comm.xml
+/applicationContext-empi.xml
+/applicationContext-localbasecomm.xml
+/applicationContext-localbasehsp.xml
+/applicationContext-localbasesecurity.xml
+/applicationContext-localbaseutil.xml
+/applicationContext.xml
+/com/
+/conf/
+/log4j.properties
+/proxool.xml

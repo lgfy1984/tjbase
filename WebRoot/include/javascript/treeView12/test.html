@@ -1,0 +1,55 @@
+
+
+
+
+
+<html>
+<HEAD>
+<TITLE>[Menu]</TITLE>
+    <title></title>
+
+<script language="JavaScript" src="MzTreeView12.js"></script>
+
+				
+</head>
+
+<body>
+    <table cellSpacing=0 cellPadding=0 width="150px" align=center border=0>     
+  		
+  		<tr>
+    		<td height="30" align="left" >
+    		
+    		<SCRIPT LANGUAGE="JavaScript">
+
+	tree = new MzTreeView("tree");
+	
+  tree.setIconPath("images/"); //可用相对路径
+
+   	
+			with(tree)
+	{
+
+N["0_999999"]="T:中国";
+N["999999_110000"]="T:北京市;C:test('aa')";
+}
+   	
+			
+	
+	document.write(tree.toString()); 
+	
+
+function test(a){
+	alert(a);
+}
+
+</SCRIPT>
+    		
+    		
+    		</td>
+    	</tr>
+  		
+    </table>
+
+  </body>
+</html>
+

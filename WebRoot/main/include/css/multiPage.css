@@ -1,0 +1,98 @@
+body{
+	margin: 0;
+}
+.multi_pages{
+	width: 100%;
+	height: 500px;
+	position: relative;
+	background:url(../images/default.jpg) bottom right no-repeat #e9f0f8;
+}
+.tabs{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 25px;
+	width: 100%;
+ 	white-space: nowrap;
+}
+.tabs_tool_btn{
+	display:none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height:25px;
+	width: 34px;
+}
+.tabs_tool_btn div{
+	height:24px;
+	width: 13px;
+	border: 1px solid #AAACBB;
+	background-image:url(../images/prev_next_btn.jpg);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.tabs_tool_btn .prev_tab_btn{
+	float: left;
+	background-position: 0 0;
+}
+.tabs_tool_btn .next_tab_btn{
+	float: right;
+	background-position: 0 -25px;
+}
+.tab{
+	display:inline-block; 
+	height: 25px;
+	line-height: 25px;
+	width: 120px;
+	background: url(../images/tab_bg1.jpg) repeat-x 0 0;
+	position: relative;
+	border: 1px solid #AAACBB;
+	border-bottom: 0px;
+	z-index: 50;
+}
+.tab_active{
+	background: url(../images/tab_bg1.jpg) repeat-x 0 -25px;
+	brder-bottom: 1px solid #fff;
+}
+.tab .page_name{
+	width: 95px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
+	float: left;
+	padding-left: 5px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.tab .close{
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background: url(../images/page_close.png) no-repeat center;
+	cursor: pointer;
+}
+.page_container{
+	position: relative;
+}
+.one_page{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: #ffffff;
+	border-top: 1px solid #AAACBB;
+	width: 100%;
+}
+.one_page .leader{
+	color: #0683CB;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+}
+.iframe_div iframe{
+	width: 100%;
+	border: 0;
+	background: transparent;	
+}

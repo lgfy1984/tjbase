@@ -1,0 +1,157 @@
+.black_overlay{
+    display: none; 
+    position: absolute;  
+    top: 0%;  
+    left: 0%;  
+    width: 100%;  
+    height: 100%;  
+    background-color: black;  
+    z-index:1001;  
+    -moz-opacity: 0.3;  
+    opacity:.80;  
+    filter: alpha(opacity=30);  
+    
+} 
+.white_content {
+    display: none;  
+    position: absolute; 
+    top: 25%; 
+    left: 35%; 
+    width: 350px; 
+    height:418px;
+    padding: 0px;
+    z-index:1002;
+    overflow:hidden;
+    background-image:url('../main/include/images/bohao_bg.png');
+}
+.tccTitle{
+	width:98%;
+	height:(1/7)*100%;
+	text-align:center;
+	line-height:(1/7)*100%;
+	margin-left:1%;
+	overflow:hidden;
+}
+#tccTitle img{
+	width:18px;
+	height: 18px;
+	float: right;
+	margin-top: 15px;
+	margin-right:13px;
+	cursor:pointer;
+}
+.tccNo{
+	
+	width:292px;
+	height:45px;
+	margin:0 auto;
+	margin-top:12px;
+	
+	
+}
+.tccBhp{
+	margin:0 auto;
+	margin-top:5px;
+	text-align:center;
+	line-height:30px;
+}
+#tccBhp td{
+	background-image:url('../main/include/images/bohao_normal.png');
+	width:90px;
+	height:52px;
+	color:white;
+	font-size:30px;
+	font-weight:normal;
+	cursor:pointer;
+	background-repeat:no-repeat;
+	font-weight:bold;
+	font-family:"Î¢ÈíÑÅºÚ";
+}
+#tccBhp td.over{
+	background-image:url('../main/include/images/bohao_down.png');
+}
+#tccBhp .createSpace td{
+	background-image:none;
+	height:10px;
+	
+}
+#tccBhp td.bohao_call{
+	background-image:url('../main/include/images/bohao_call.png');
+	height:45px;
+}
+#tccBhp td.bohao_back{
+	background-image:url('../main/include/images/bohao_back.png');
+	height:45px;
+}
+#tccBhp td.bohao_hangOff{
+	background-image:url('../main/include/images/bohao_hangOff.png');
+	height:45px;
+}
+#pn{
+	font-size:30px;
+	display:block;
+	margin-top:20px;
+	margin-right:5px;
+	color:#04a7f6;
+	font-weight:bold;
+	width:280px;
+	margin-left:5px;
+	border:none;
+	outline:none;
+	
+}
+
+.zzcxllb{
+    display: none; 
+    position: absolute;  
+    top: 0%;  
+    left: 0%;  
+    width: 100%;  
+    height: 100%;  
+    background-color: black;  
+    z-index:1001;  
+    -moz-opacity: 0.8;  
+    opacity:.80;  
+    filter: alpha(opacity=80);  
+} 
+.tccxllb {
+    display: none;  
+    position: absolute; 
+    top: 25%; 
+    left: 65%;
+    width: 130px; 
+    padding: 0px;
+    border: 2px solid #0099FF; 
+    background-color: white; 
+    z-index:1002;
+    overflow: auto;
+}
+.tccTable{
+	border: 1px solid #0099FF;
+	width:100%;
+	align:center;
+	text-align: center;
+	color: #0099FF;
+}
+.tccTd{
+	border-bottom: 1px solid #0099FF;
+}
+.closeTcc{
+	width:25px;
+	height: 25px;
+	float: right;
+	margin-top: 5px
+}
+.tccDiv{
+	height:300px;
+	overflow:auto;
+}
+.backColor{
+	background-color: #FFCC33;
+}
+#qctcc{
+	left:70%;
+}
+#zfjtcc{
+	left:75%;
+}

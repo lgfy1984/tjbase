@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 通用service及dao start -->
+	<bean id="CommonService"  parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommonServiceImpl">
+				<property name="commonDAO">
+					<ref bean="CommonDAO"/>
+				</property>				
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommonDAO" class="com.tianjian.comm.dao.hibernate.CommonDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<!-- 通用service及dao end -->
+<!-- 生成输入码开始 -->
+	<bean id="CommConfigInputDictService" parent="BaseTxService">	
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigInputDictServiceImpl">
+				<property name="dao">
+					<ref bean="CommConfigInputDictDAO"/>
+				</property>				
+			</bean>
+		</property>
+	</bean>	
+	<bean id="CommConfigInputDictDAO"  class="com.tianjian.comm.dao.hibernate.CommConfigInputDictDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>	
+<!-- 生成输入码结束 -->
+<!-- 生成拼音开始 -->
+<bean id="Hanzizh" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.util.Hanzitopinyin">
+				<property name="comm">
+					<ref bean="CommonDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+<!-- 生成拼音结束 -->
+<!-- suggest开始 -->
+	<bean name="/searchSuggest" class="com.tianjian.util.searchsuggest.struts.action.SearchSuggestAction" singleton="false">
+		<property name="ssService">
+			<ref bean="ssService" />
+		</property>
+	</bean>
+	
+	<bean id="ssService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.util.searchsuggest.business.service.SearchSuggestServiceImpl">
+				<property name="ssDao">
+					<ref bean="ssDao"/>
+				</property>
+			</bean>
+		</property>				
+	</bean>
+	
+	
+	<bean id="ssDao"
+		class="com.tianjian.util.searchsuggest.dao.hibernate.SearchSuggestDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+<!-- suggest结束 -->
+	<bean id="ApplicationContextUtil" class="com.tianjian.util.ApplicationContextUtil"/>
+
+</beans>
+	

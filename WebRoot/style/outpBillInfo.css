@@ -1,0 +1,108 @@
+#register_fee,#else_fee{
+	width:80%;
+	overflow:hidden;
+}
+#else_fee{
+	width:100%;
+}
+.table_base_info{
+	width:100%;
+
+}
+.table_base_info tr td{
+	color:black;
+	font-family:"宋体";
+	font-size:12px;
+	padding:3px 0px;
+	padding-left:10px;
+	
+}
+hr{
+	
+	border:0px;
+	height:1px;
+	background-color:black;
+	margin-top:0px;
+	
+}
+
+
+
+
+.table_bill_detail .lastLine td{
+	text-align:right;
+    padding:3px 0px;
+	font-size:18px;
+	padding-right:20px;
+}
+
+.right_content_div table{
+	margin: 0px auto;
+}
+.right_content_div table td{
+	width:60px;
+	text-align: center;
+}
+.right_content_div  input{
+	background:none;
+	border:none;
+	color:#34ADAE;
+	background-image: url(../include/images/crm_arc_normal_50.png);
+	width:50px;
+	height:50px;
+	cursor:pointer;
+	margin-bottom:20px;
+	background-repeat:no-repeat;
+	outline:none;
+	font-size:12px;
+}
+.right_content_div .selected{
+	width:54px;
+	height:54px;
+	color:white;
+	background-image: url(../include/images/crm_arc_current_54.png);
+}
+.div_width_100 .div_left .right_button{
+	border:none;
+	background:none;
+	background-image: url(../include/images/arrow_right.png);
+	background-repeat:no-repeat;
+	cursor:pointer;
+	height:30px;
+	width:30px;
+	text-align:left;
+	padding:0px;
+	font-size:0px;
+	margin-top:80px;
+	margin-left:20px;
+	outline:none;
+  }
+ .div_width_100 .div_left .left_button{
+ 	border:none;
+	background:none;
+	background-image: url(../include/images/arrow_left.png);
+	background-repeat:no-repeat;
+	cursor:pointer;
+	height:30px;
+	width:30px;
+	text-align:left;
+	padding:0px;
+	font-size:0px;
+	margin-top:80px;
+	margin-right:20px;
+	outline:none;
+ }
+ #register_fee{
+ 	margin-left: 10%;
+ 	border: 1px solid #000000;
+ }
+ .table_bill_detail{
+ 	padding-left:10px;
+
+ }
+.table_bill_detail th{
+	text-align: left;
+}
+.height_tr_20{
+	height:20px;
+}

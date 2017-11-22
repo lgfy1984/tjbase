@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 第一部分：Action配置部分 -->
+	<!-- 国家基本药物目录药品类别 -->
+	<bean name="/comm/commConfigGbDrugclass" class="com.tianjian.comm.struts.action.CommConfigGbDrugclassAction" singleton="false">
+		<property name="commConfigGbDrugclassService">
+			<ref bean="commConfigGbDrugclassService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigGbDrugclassView" class="com.tianjian.comm.struts.action.CommConfigGbDrugclassViewAction" singleton="false">
+		<property name="commConfigGbDrugclassViewService">
+			<ref bean="commConfigGbDrugclassViewService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<!-- 独立业务系统类型字典 -->
+	<bean name="/comm/commConfigSystemtype" class="com.tianjian.comm.struts.action.CommConfigSystemtypeAction" singleton="false">
+		<property name="commConfigSystemtypeService">
+			<ref bean="commConfigSystemtypeService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigCountry" class="com.tianjian.comm.struts.action.CommConfigCountryAction" singleton="false">
+		<property name="commConfigCountryService">
+			<ref bean="CommConfigCountryService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigAbo" class="com.tianjian.comm.struts.action.CommConfigAboAction" singleton="false">
+		<property name="commConfigAboService">
+			<ref bean="CommConfigAboService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigDegree" class="com.tianjian.comm.struts.action.CommConfigDegreeAction" singleton="false">
+		<property name="commConfigDegreeService">
+			<ref bean="CommConfigDegreeService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigEmptitle" class="com.tianjian.comm.struts.action.CommConfigEmptitleAction" singleton="false">
+		<property name="commConfigEmptitleService">
+			<ref bean="CommConfigEmptitleService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigIdType" class="com.tianjian.comm.struts.action.CommConfigIdTypeAction" singleton="false">
+		<property name="commConfigIdTypeService">
+			<ref bean="CommConfigIdTypeService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigMaritalStatus" class="com.tianjian.comm.struts.action.CommConfigMaritalStatusAction" singleton="false">
+		<property name="commConfigMaritalStatusService">
+			<ref bean="CommConfigMaritalStatusService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigNationality" class="com.tianjian.comm.struts.action.CommConfigNationalityAction" singleton="false">
+		<property name="commConfigNationalityService">
+			<ref bean="CommConfigNationalityService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigProfession" class="com.tianjian.comm.struts.action.CommConfigProfessionAction" singleton="false">
+		<property name="commConfigProfessionService">
+			<ref bean="CommConfigProfessionService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigRelationship" class="com.tianjian.comm.struts.action.CommConfigRelationshipAction" singleton="false">
+		<property name="commConfigRelationshipService">
+			<ref bean="CommConfigRelationshipService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigRh" class="com.tianjian.comm.struts.action.CommConfigRhAction" singleton="false">
+		<property name="commConfigRhService">
+			<ref bean="CommConfigRhService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigSex" class="com.tianjian.comm.struts.action.CommConfigSexAction" singleton="false">
+		<property name="commConfigSexService">
+			<ref bean="CommConfigSexService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigClinicattr" class="com.tianjian.comm.struts.action.CommConfigClinicattrAction" singleton="false">
+		<property name="commConfigClinicattrService">
+			<ref bean="CommConfigClinicattrService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+		<bean name="/comm/commConfigDept" class="com.tianjian.comm.struts.action.CommConfigDeptAction" singleton="false">
+		<property name="commConfigDeptService">
+			<ref bean="CommConfigDeptService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigDepttype" class="com.tianjian.comm.struts.action.CommConfigDepttypeAction" singleton="false">
+		<property name="commConfigDepttypeService">
+			<ref bean="CommConfigDepttypeService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigEconkind" class="com.tianjian.comm.struts.action.CommConfigEconkindAction" singleton="false">
+		<property name="commConfigEconkindService">
+			<ref bean="CommConfigEconkindService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigStafftype" class="com.tianjian.comm.struts.action.CommConfigStafftypeAction" singleton="false">
+		<property name="commConfigStafftypeService">
+			<ref bean="CommConfigStafftypeService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigUnittype" class="com.tianjian.comm.struts.action.CommConfigUnittypeAction" singleton="false">
+		<property name="commConfigUnittypeService">
+			<ref bean="CommConfigUnittypeService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigUnitgrade" class="com.tianjian.comm.struts.action.CommConfigUnitgradeAction" singleton="false">
+		<property name="commConfigUnitgradeService">
+			<ref bean="CommConfigUnitgradeService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigLocation" class="com.tianjian.comm.struts.action.CommConfigLocationAction" singleton="false">
+		<property name="commConfigLocationService">
+			<ref bean="CommConfigLocationService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigCardtype" class="com.tianjian.comm.struts.action.CommConfigCardtypeAction" singleton="false">
+		<property name="commConfigCardtypeService">
+			<ref bean="CommConfigCardtypeService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigCardorg" class="com.tianjian.comm.struts.action.CommConfigCardorgAction" singleton="false">
+		<property name="commConfigCardorgService">
+			<ref bean="CommConfigCardorgService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commGbCoptp" class="com.tianjian.comm.struts.action.CommGbCoptpAction" singleton="false">
+		<property name="commGbCoptpService">
+			<ref bean="commGbCoptpService"/>
+		</property>
+		<property name="commConfigInputDictService">
+              <ref bean="CommConfigInputDictService" />
+        </property> 
+	</bean>
+	<bean name="/comm/commConfigFtManage" class="com.tianjian.comm.struts.action.CommConfigFtManageAction" singleton="false">
+        <property name="service">
+              <ref local="commConfigFtManageService" />
+        </property>  
+         <property name="commConfigInputDictService">
+              <ref bean="CommConfigInputDictService" />
+        </property>   
+    </bean>
+    <bean name="/comm/commConfigHospitalType" class="com.tianjian.comm.struts.action.CommConfigHospitalTypeAction" singleton="false">
+		<property name="commConfigHospitalTypeService">
+			<ref bean="commConfigHospitalTypeService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigPositiontitle" class="com.tianjian.comm.struts.action.CommConfigPositiontitleAction">
+		<property name="commConfigPositiontitleService">
+			<ref bean="commConfigPositiontitleService"/>
+		</property>
+		<property name="commConfigInputDictService">
+              <ref bean="CommConfigInputDictService" />
+        </property> 
+	</bean>	
+	<bean name="/comm/commConfigDegreeLevel" class="com.tianjian.comm.struts.action.CommConfigDegreeLevelAction">
+		<property name="service">
+			<ref bean="commConfigDegreeLevelService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>	
+	<bean name="/comm/commConfigDrugclass" class="com.tianjian.comm.struts.action.CommConfigDrugclassAction">
+		<property name="commConfigDrugclassService">
+			<ref bean="commConfigDrugclassService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigDrugunits" class="com.tianjian.comm.struts.action.CommConfigDrugunitsAction">
+		<property name="commConfigDrugunitsService">
+			<ref bean="commConfigDrugunitsService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigDrugform" class="com.tianjian.comm.struts.action.CommConfigDrugformAction">
+		<property name="commConfigDrugformService">
+			<ref bean="commConfigDrugformService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigLocationTown" class="com.tianjian.comm.struts.action.CommConfigLocationTownAction" singleton="false">
+		<property name="service">
+			<ref bean="commConfigLocationTownService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigLocationVillage" class="com.tianjian.comm.struts.action.CommConfigLocationVillageAction" singleton="false">
+		<property name="service">
+			<ref bean="commConfigLocationVillageService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigLocationGroup" class="com.tianjian.comm.struts.action.CommConfigLocationGroupAction" singleton="false">
+		<property name="service">
+			<ref bean="commConfigLocationGroupService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean name="/comm/commConfigVocation" class="com.tianjian.comm.struts.action.CommConfigVocationAction" singleton="false">
+		<property name="commConfigVocationService">
+			<ref bean="commConfigVocationService"/>
+		</property>
+		<property name="commConfigInputDictService">
+              <ref bean="CommConfigInputDictService" />
+        </property>   
+	</bean>
+	<bean name="/comm/commConfigTrue" class="com.tianjian.comm.struts.action.CommConfigTrueAction" singleton="false">
+		<property name="commConfigTrueService">
+			<ref bean="commConfigTrueService"/>
+		</property>
+		<property name="commConfigInputDictService">
+              <ref bean="CommConfigInputDictService" />
+        </property> 
+	</bean>
+	<bean name="/comm/commConfigHave" class="com.tianjian.comm.struts.action.CommConfigHaveAction" singleton="false">
+		<property name="commConfigHaveService">
+			<ref bean="commConfigHaveService"/>
+		</property>
+		<property name="commConfigInputDictService">
+              <ref bean="CommConfigInputDictService" />
+        </property> 
+	</bean>
+	<bean name="/comm/commConfigNormal" class="com.tianjian.comm.struts.action.CommConfigNormalAction" singleton="false">
+		<property name="commConfigNormalService">
+			<ref bean="commConfigNormalService"/>
+		</property>
+		<property name="commConfigInputDictService">
+              <ref bean="CommConfigInputDictService" />
+        </property> 
+	</bean>
+	<bean name="/comm/commConfigYes" class="com.tianjian.comm.struts.action.CommConfigYesAction" singleton="false">
+		<property name="commConfigYesService">
+			<ref bean="commConfigYesService"/>
+		</property>
+		<property name="commConfigInputDictService">
+              <ref bean="CommConfigInputDictService" />
+        </property> 
+	</bean>
+    <bean name="/comm/commPopulationNature" class="com.tianjian.comm.struts.action.CommConfigPopulationNatureAction" singleton="false">
+    	<property name="natureService">
+    		<ref local="commConfigPopulationNatureService"/>
+    	</property>
+    	<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+		<property name="midService">
+			<ref local="commCongihMidwiferyService"/>
+		</property>
+    </bean>
+    
+    <bean name="/comm/commCongihMidwifery" class="com.tianjian.comm.struts.action.CommCongihMidwiferyAction" singleton="false">
+    	<property name="wifeService">
+    		<ref local="commCongihMidwiferyService"/>
+    	</property>
+    </bean>
+    <bean name="/comm/commConfigHospitalClass" class="com.tianjian.comm.struts.action.CommConfigHospitalClassAction" singleton="false">
+    	<property name="classService">
+    		<ref local="commConfigHospitalClassService"/>
+    	</property>
+    	<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+		<property name="midService">
+			<ref local="commCongihMidwiferyService"/>
+		</property>
+    </bean>
+    
+    
+    
+    
+    
+    
+    
+    <!-- 第二部分：Service配置部分 -->
+	<!-- 国家基本药物目录药品类别 -->
+	<bean id="commConfigGbDrugclassService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigGbDrugclassServiceImpl">
+				<property name="commConfigGbDrugclassDAO">
+					<ref bean="commConfigGbDrugclassDAO" />
+				</property>
+				<property name="commonDAO">
+					<ref bean="CommonDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- 国家基本药物目录药品类别查看 -->
+	<bean id="commConfigGbDrugclassViewService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigGbDrugclassViewServiceImpl">
+				<property name="commConfigGbDrugclassViewDAO">
+					<ref bean="commConfigGbDrugclassViewDAO" />
+				</property>
+				<property name="commonDAO">
+					<ref bean="CommonDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- 独立业务系统类型 -->
+	<bean id="commConfigSystemtypeService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigSystemtypeServiceImpl">
+				<property name="commConfigSystemtypeDAO">
+					<ref bean="commConfigSystemtypeDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigCountryService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigCountryServiceImpl">
+				<property name="commConfigCountryDAO">
+					<ref bean="CommConfigCountryDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigAboService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigAboServiceImpl">
+				<property name="commConfigAboDAO">
+					<ref bean="CommConfigAboDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigDegreeService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigDegreeServiceImpl">
+				<property name="commConfigDegreeDAO">
+					<ref bean="CommConfigDegreeDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigEmptitleService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigEmptitleServiceImpl">
+				<property name="commConfigEmptitleDAO">
+					<ref bean="CommConfigEmptitleDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigIdTypeService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigIdTypeServiceImpl">
+				<property name="commConfigIdTypeDAO">
+					<ref bean="CommConfigIdTypeDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigMaritalStatusService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigMaritalStatusServiceImpl">
+				<property name="commConfigMaritalStatusDAO">
+					<ref bean="CommConfigMaritalStatusDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigNationalityService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigNationalityServiceImpl">
+				<property name="commConfigNationalityDAO">
+					<ref bean="CommConfigNationalityDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigProfessionService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigProfessionServiceImpl">
+				<property name="commConfigProfessionDAO">
+					<ref bean="CommConfigProfessionDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigRelationshipService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigRelationshipServiceImpl">
+				<property name="commConfigRelationshipDAO">
+					<ref bean="CommConfigRelationshipDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigRhService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigRhServiceImpl">
+				<property name="commConfigRhDAO">
+					<ref bean="CommConfigRhDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigSexService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigSexServiceImpl">
+				<property name="commConfigSexDAO">
+					<ref bean="CommConfigSexDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigClinicattrService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigClinicattrServiceImpl">
+				<property name="commConfigClinicattrDAO">
+					<ref bean="CommConfigClinicattrDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigDeptService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigDeptServiceImpl">
+				<property name="commConfigDeptDAO">
+					<ref bean="CommConfigDeptDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigDepttypeService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigDepttypeServiceImpl">
+				<property name="commConfigDepttypeDAO">
+					<ref bean="CommConfigDepttypeDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigEconkindService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigEconkindServiceImpl">
+				<property name="commConfigEconkindDAO">
+					<ref bean="CommConfigEconkindDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigStafftypeService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigStafftypeServiceImpl">
+				<property name="commConfigStafftypeDAO">
+					<ref bean="CommConfigStafftypeDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigUnittypeService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigUnittypeServiceImpl">
+				<property name="commConfigUnittypeDAO">
+					<ref bean="CommConfigUnittypeDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigUnitgradeService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigUnitgradeServiceImpl">
+				<property name="commConfigUnitgradeDAO">
+					<ref bean="CommConfigUnitgradeDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigLocationService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigLocationServiceImpl">
+				<property name="commConfigLocationDAO">
+					<ref bean="CommConfigLocationDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigCardtypeService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigCardtypeServiceImpl">
+				<property name="commConfigCardtypeDAO">
+					<ref bean="CommConfigCardtypeDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommConfigCardorgService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigCardorgServiceImpl">
+				<property name="commConfigCardorgDAO">
+					<ref bean="CommConfigCardorgDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commGbCoptpService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommGbCoptpServiceImpl">
+				<property name="commGbCoptpDAO">
+					<ref bean="commGbCoptpDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	 <bean id="commConfigFtManageService" parent="BaseTxService">	
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigFtManageServiceImpl">
+				<property name="commConfigFtManageDAO">
+					<ref local="commConfigFtManageDAO"/>
+				</property>
+				<property name="commonDAO">
+					<ref bean="CommonDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>	
+	<bean id="commConfigHospitalTypeService" parent="BaseTxService">
+		<property name="target">
+			<bean
+				class="com.tianjian.comm.business.service.CommConfigHospitalTypeServiceImpl">
+				<property name="commConfigHospitalTypeDAO">
+					<ref bean="commConfigHospitalTypeDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigPositiontitleService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigPositiontitleServiceImpl">
+				<property name="commConfigPositiontitleDAO">
+					<ref bean="commConfigPositiontitleDAO" />
+				</property>				
+				 
+			</bean>
+		</property>					
+	</bean>	
+	<bean id="commConfigDegreeLevelService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigDegreeLevelServiceImpl">
+				<property name="commConfigDegreeLevelDAO">
+					<ref bean="commConfigDegreeLevelDAO" />
+				</property>				
+				<property name="commonDAO">
+					<ref bean="CommonDAO" />
+				</property>
+			</bean>
+		</property>	
+	</bean>
+	<bean id="commConfigDrugclassService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigDrugclassServiceImpl">
+				<property name="commConfigDrugclassDAO">
+					<ref bean="commConfigDrugclassDAO" />
+				</property>				
+				<property name="commonDAO">
+					<ref bean="CommonDAO" />
+				</property>
+			</bean>
+		</property>					
+	</bean>	
+	<bean id="commConfigDrugunitsService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigDrugunitsServiceImpl">
+				<property name="commConfigDrugunitsDAO">
+					<ref bean="commConfigDrugunitsDAO" />
+				</property>				
+				<property name="commonDAO">
+					<ref bean="CommonDAO" />
+				</property>
+			</bean>
+		</property>					
+	</bean>
+	<bean id="commConfigDrugformService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigDrugformServiceImpl">
+				<property name="commConfigDrugformDAO">
+					<ref bean="commConfigDrugformDAO" />
+				</property>				
+				<property name="commonDAO">
+					<ref bean="CommonDAO" />
+				</property>
+			</bean>
+		</property>					
+	</bean>
+	<bean id="commConfigLocationTownService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.ICommConfigLocationTownServiceImpl">
+				<property name="commConfigLocationTownDAO">
+					<ref bean="commConfigLocationTownDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigLocationVillageService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigLocationVillageServiceImpl">
+				<property name="commConfigLocationVillageDAO">
+					<ref bean="commConfigLocationVillageDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigLocationGroupService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigLocationGroupServiceImpl">
+				<property name="commConfigLocationGroupDAO">
+					<ref bean="commConfigLocationGroupDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigVocationService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigVocationServiceImpl">
+				<property name="commConfigVocationDAO">
+					<ref bean="commConfigVocationDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigTrueService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigTrueServiceImpl">
+				<property name="commConfigTrueDAO">
+					<ref bean="commConfigTrueDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigHaveService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigHaveServiceImpl">
+				<property name="commConfigHaveDAO">
+					<ref bean="commConfigHaveDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigNormalService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigNormalServiceImpl">
+				<property name="commConfigNormalDAO">
+					<ref bean="commConfigNormalDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigYesService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigYesServiceImpl">
+				<property name="commConfigYesDAO">
+					<ref bean="commConfigYesDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigPopulationNatureService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigPopulationNatureServiceImpl">
+				<property name="natureDao">
+					<ref local="commConfigPopulationNatureDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commCongihMidwiferyService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommCongihMidwiferyServiceImpl">
+				<property name="midDao">
+					<ref local="commCongihMidwiferyDAO"/>
+				</property>
+				<property name="comm">
+					<ref bean="CommonDAO"/>
+				</property>
+				<property name="classDao">
+					<ref local="commConfigHospitalClassDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigHospitalClassService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigHospitalClassServiceImpl">
+				<property name="classDao">
+					<ref local="commConfigHospitalClassDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 第三部分：Dao配置部分 -->
+	<bean id="commConfigGbDrugclassDAO" class="com.tianjian.comm.dao.hibernate.CommConfigGbDrugclassDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="commConfigGbDrugclassViewDAO" class="com.tianjian.comm.dao.hibernate.CommConfigGbDrugclassViewDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="commConfigSystemtypeDAO" class="com.tianjian.comm.dao.hibernate.CommConfigSystemtypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigCountryDAO" class="com.tianjian.comm.dao.hibernate.CommConfigCountryDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigAboDAO" class="com.tianjian.comm.dao.hibernate.CommConfigAboDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigDegreeDAO" class="com.tianjian.comm.dao.hibernate.CommConfigDegreeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigEmptitleDAO" class="com.tianjian.comm.dao.hibernate.CommConfigEmptitleDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigIdTypeDAO" class="com.tianjian.comm.dao.hibernate.CommConfigIdTypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigMaritalStatusDAO" class="com.tianjian.comm.dao.hibernate.CommConfigMaritalStatusDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigNationalityDAO" class="com.tianjian.comm.dao.hibernate.CommConfigNationalityDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigProfessionDAO" class="com.tianjian.comm.dao.hibernate.CommConfigProfessionDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigRelationshipDAO" class="com.tianjian.comm.dao.hibernate.CommConfigRelationshipDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigRhDAO" class="com.tianjian.comm.dao.hibernate.CommConfigRhDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigSexDAO" class="com.tianjian.comm.dao.hibernate.CommConfigSexDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigClinicattrDAO" class="com.tianjian.comm.dao.hibernate.CommConfigClinicattrDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigDeptDAO" class="com.tianjian.comm.dao.hibernate.CommConfigDeptDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigDepttypeDAO" class="com.tianjian.comm.dao.hibernate.CommConfigDepttypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigEconkindDAO" class="com.tianjian.comm.dao.hibernate.CommConfigEconkindDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigStafftypeDAO" class="com.tianjian.comm.dao.hibernate.CommConfigStafftypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigUnittypeDAO" class="com.tianjian.comm.dao.hibernate.CommConfigUnittypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigUnitgradeDAO" class="com.tianjian.comm.dao.hibernate.CommConfigUnitgradeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigLocationDAO" class="com.tianjian.comm.dao.hibernate.CommConfigLocationDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigCardtypeDAO" class="com.tianjian.comm.dao.hibernate.CommConfigCardtypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CommConfigCardorgDAO" class="com.tianjian.comm.dao.hibernate.CommConfigCardorgDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="commGbCoptpDAO" class="com.tianjian.comm.dao.hibernate.CommGbCoptpDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="commConfigFtManageDAO" class="com.tianjian.comm.dao.hibernate.CommConfigFtManageDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="commConfigHospitalTypeDAO" class="com.tianjian.comm.dao.hibernate.CommConfigHospitalTypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="commConfigPositiontitleDAO" class="com.tianjian.comm.dao.hibernate.CommConfigPositiontitleDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="commConfigDegreeLevelDAO" class="com.tianjian.comm.dao.hibernate.CommConfigDegreeLevelDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="commConfigLoactionTownDAO" class="com.tianjian.comm.dao.hibernate.CommConfigLocationTownDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="commConfigLocationVillageDAO" class="com.tianjian.comm.dao.hibernate.CommConfigLocationVillageDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="commConfigDrugclassDAO" class="com.tianjian.comm.dao.hibernate.CommConfigDrugclassDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="commConfigDrugunitsDAO" class="com.tianjian.comm.dao.hibernate.CommConfigDrugunitsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="commConfigDrugformDAO" class="com.tianjian.comm.dao.hibernate.CommConfigDrugformDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="commConfigLocationTownDAO" class="com.tianjian.comm.dao.hibernate.CommConfigLocationTownDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="commConfigLocationGroupDAO" class="com.tianjian.comm.dao.hibernate.CommConfigLocationGroupDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="commConfigVocationDAO" class="com.tianjian.comm.dao.hibernate.CommConfigVocationDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="commConfigTrueDAO" class="com.tianjian.comm.dao.hibernate.CommConfigTrueDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="commConfigHaveDAO" class="com.tianjian.comm.dao.hibernate.CommConfigHaveDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="commConfigNormalDAO" class="com.tianjian.comm.dao.hibernate.CommConfigNormalDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="commConfigYesDAO" class="com.tianjian.comm.dao.hibernate.CommConfigYesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<!-- ******************commConfigIcd10*********start*************************************************-->
+	<bean name="/comm/commConfigIcd10" class="com.tianjian.comm.struts.action.CommConfigIcd10Action" singleton="false">
+		<property name="commConfigIcd10Service">
+			<ref bean="commConfigIcd10Service"/>
+		</property>
+		<property name="commConfigInputDictService">
+              <ref bean="CommConfigInputDictService" />
+        </property> 
+	</bean>
+	<bean id="commConfigIcd10Service" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigIcd10ServiceImpl">
+				<property name="commConfigIcd10DAO">
+					<ref bean="commConfigIcd10DAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigIcd10DAO" class="com.tianjian.comm.dao.hibernate.CommConfigIcd10DAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="commConfigPopulationNatureDAO" class="com.tianjian.comm.dao.hibernate.CommConfigPopulationNatureDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="commCongihMidwiferyDAO" class="com.tianjian.comm.dao.hibernate.CommCongihMidwiferyDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	<bean id="commConfigHospitalClassDAO" class="com.tianjian.comm.dao.hibernate.CommConfigHospitalClassDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+<!-- ******************commConfigIcd10*********end********************************************************* -->
+	<!-- ******************commIHEAuthority*********start********************************************************* -->
+	<bean name="/comm/commIHEAuthority" class="com.tianjian.comm.struts.action.CommIHEAuthorityAction" singleton="false">
+		<property name="commIHEAuthorityServiceImpl">
+			<ref bean="CommIHEAuthorityServiceImpl" />
+		</property>
+	</bean>
+	<bean id="CommIHEAuthorityServiceImpl" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommIHEAuthorityServiceImpl">
+				<property name="commIHEAuthorityDAO">
+					<ref bean="CommIHEAuthorityDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommIHEAuthorityDAO" class="com.tianjian.comm.dao.hibernate.CommIHEAuthorityDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+<!-- ******************commIHEAuthority*********end********************************************************* -->
+	
+	
+	
+<!-- ******************commIHEFacilityAction*********start********************************************************* -->
+	<bean name="/comm/commIHEFacility" class="com.tianjian.comm.struts.action.CommIHEFacilityAction" singleton="false">
+		<property name="commIHEFacilityServiceImpl">
+			<ref bean="CommIHEFacilityServiceImpl" />
+		</property>
+	</bean>
+	<bean id="CommIHEFacilityServiceImpl" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommIHEFacilityServiceImpl">
+				<property name="commIHEFacilityDAO">
+					<ref bean="CommIHEFacilityDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommIHEFacilityDAO" class="com.tianjian.comm.dao.hibernate.CommIHEFacilityDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+<!-- ******************commIHEFacilityAction*********end********************************************************* -->	
+
+
+
+
+<!-- ******************CommIHENameTypeAction*********start********************************************************* -->
+	<bean name="/comm/commIHENameType" class="com.tianjian.comm.struts.action.CommIHENameTypeAction" singleton="false">
+		<property name="commIHENameTypeServiceImpl">
+			<ref bean="CommIHENameTypeServiceImpl" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="CommIHENameTypeServiceImpl" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommIHENameTypeServiceImpl">
+				<property name="commIHENameTypeDAO">
+					<ref bean="CommIHENameTypeDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommIHENameTypeDAO" class="com.tianjian.comm.dao.hibernate.CommIHENameTypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+<!-- ******************CommIHENameTypeAction*********end********************************************************* -->	
+	
+</beans>

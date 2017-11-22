@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/log4j.properties</param-value>
+	</context-param>
+	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>com.tianjian.util.comm.EncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>TenantIdFilter</filter-name>
+		<filter-class>com.tianjian.tenant.util.TenantIdFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>TenantIdFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>TenantIdFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	<!-- begin Spring配置-->
+  	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/applicationContext.xml,
+			/WEB-INF/classes/applicationContext-basehsp.xml,
+			/WEB-INF/classes/applicationContext-basecommon.xml,
+			/WEB-INF/classes/applicationContext-localbaseutil.xml,
+			/WEB-INF/classes/applicationContext-localbasecomm.xml,
+			/WEB-INF/classes/applicationContext-localbasesecurity.xml,
+			/WEB-INF/classes/applicationContext-localbasehsp.xml,
+			/WEB-INF/classes/applicationContext-comm.xml,
+			/WEB-INF/classes/applicationContext-empi.xml
+		</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener> 
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+<!-- end Spring配置 -->
+	
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>
+				/WEB-INF/struts-config.xml,
+				/WEB-INF/struts-config-basehsp.xml, 
+				/WEB-INF/struts-config-basecommon.xml, 
+				/WEB-INF/struts-config-localbaseutil.xml, 
+				/WEB-INF/struts-config-localbasecomm.xml, 
+				/WEB-INF/struts-config-localbasesecurity.xml, 
+				/WEB-INF/struts-config-localbasehsp.xml,
+				/WEB-INF/struts-config-comm.xml,
+				/WEB-INF/struts-config-empi.xml
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<!-- 数据库中读取配置文件内容-->
+	<servlet>
+		<servlet-name>SercurityConfigParameterServlet</servlet-name>
+		<servlet-class>com.tianjian.security.struts.servlet.SercurityConfigParameterServlet</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SercurityConfigParameterServlet</servlet-name>
+		<url-pattern>/SercurityConfigParameterServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RandomCode</servlet-name>
+		<servlet-class>com.tianjian.security.struts.servlet.RandomCode</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RandomCode</servlet-name>
+		<url-pattern>/genRandomCode</url-pattern>
+	</servlet-mapping>
+	
+	<error-page>
+       <error-code>404</error-code>
+       <location>/include/error/404.jsp</location>
+    </error-page>
+</web-app>

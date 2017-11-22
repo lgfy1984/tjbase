@@ -1,0 +1,45 @@
+body{
+	margin:10px 5px;
+	text-align:center;
+	padding:0px;
+	font-size:12px;
+}
+body *{
+	font-size:12px;
+}
+.table{border:0; text-align:center; font-size:12px; background-color:#bfbfbf; width:580px; margin:10px auto;}
+
+.qian{
+	background-color:#f7f7f7; 	
+	width:140px; 
+	height:30px;
+	font-size:12px;
+	text-align:right; 
+	font-family:Arial; 
+
+	}
+
+.hou{
+	background-color:#ffffff; 
+	line-height:30px;
+	text-align:left;	
+	padding-left:8px;
+	width:150px; 
+	height:30px;
+	font-size:12px;
+	font-family:Arial;
+	}
+.biaoti{
+	height:25px;
+	font-size:12px;
+	font-family:Arial;
+	font-weight:bold;
+	background:url(../../../include/images/bg.gif) repeat-x;	
+	}
+.biaoti1{
+	height:25px;
+	font-size:12px;
+	font-family:Arial;
+	font-weight:bold;
+	background:url(../../../include/images/trbg.gif) repeat-x;	
+	}

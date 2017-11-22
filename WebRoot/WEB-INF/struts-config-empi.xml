@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+  <data-sources />
+  <form-beans>
+		<form-bean name="securityUserBaseinfo" type="com.tianjian.empi.struts.form.SecurityUserBaseinfoForm" />
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >  
+	<!-- 居民信息维护 -->  
+	<action path="/empi/securityUserBaseinfo" name="securityUserBaseinfo"  scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+	</action>
+  </action-mappings>
+</struts-config>
+

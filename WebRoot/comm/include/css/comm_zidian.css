@@ -1,0 +1,158 @@
+body{
+	margin:10px auto;	
+	}
+body *{
+	font-family:Arial;
+	font-size:14px;
+}
+input{
+	vertical-align: middle;
+	}
+select{
+	vertical-align: middle;
+	}
+img{
+	vertical-align: middle;
+	}
+/*查询列表样式*/
+.table{
+	border:0;
+	text-align:center;
+	font-size:14px;
+	background-color:#BFBFBF;	
+	}
+.list_title{
+	background-color:#ffffff;	
+	}	
+.list_nav{
+	height:25px;
+	font-weight:bold;
+	font-size:14px;
+	background:url(../../../include/images/bg.gif) repeat-x;	
+	}
+.list_nav td{
+	position:relative;
+	}
+tr.list_nav td table{
+	height:25px;	
+	font-size:14px;
+	font-weight:bold;
+	margin:0;
+	padding:0;	
+	}
+tr.list_nav td table tr td{
+	
+	margin:0;
+	padding:0;	
+	}
+.list_neirong{
+	height:25px;	
+		
+	}
+.list_neirong td{
+	word-break:break-all;
+	text-align:left;
+	padding-left:8px;
+	}
+.more_td{
+	line-height:22px;
+	text-align:left;
+	padding:0px 5px;	
+	}
+
+/*圆角样式代码*/
+.rt *{
+	display:block;
+	height: 1px;
+   	overflow: hidden;
+	background-color:#fff;
+	border-left:1px solid #bfbfbf;
+	border-right:1px solid #bfbfbf;
+}
+.rt{
+	display:block;
+	width:100%;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:5px;
+}
+
+.r1{
+	margin: 0 5px;
+	background-color:#bfbfbf;
+}
+.r2{
+	margin: 0 3px;
+	border-width:0px 2px;
+}
+.r3{
+	margin: 0 2px;
+}
+.r4{
+	margin: 0 1px;
+	height: 2px;
+}
+/*查询条件样式代码*/
+.table2,.table3{
+	border:0;
+	text-align:center;
+	font-size:14px;
+	background-color:#fff;	
+	}
+.table2 input{
+	height:20px;
+	width:110px;	
+	}
+
+.table3 input{
+	height:20px;
+	width:65px;	
+	}
+.table2,.table3 td{
+	height:26px;
+	}
+.jiacu{
+	 font-weight:bold;
+	 font-size:14px;
+	 color:#999999;
+}
+#list_L{
+	width:5px;
+	background:url(../images/trbg_l.gif) no-repeat 0px 0px;
+}
+.list_biaoti{
+	
+	font-weight:bold;
+	width:300px;
+	background:url(../images/trbg.gif) repeat-x;
+}
+.list_biaoti1{
+	
+	font-weight:bold;
+	width:160px;
+	background:url(../images/trbg.gif) repeat-x;
+}
+#list_C{
+	width:6px;
+	background:url(../images/trbg.gif) no-repeat 0px 0px;
+}
+
+
+
+#list_R{
+	width:6px;
+	background:url(../images/trbg_r.gif) no-repeat 0px 0px;
+}
+.list_cc{
+	
+	background:url(../images/trbg.gif) repeat-x 0px 0px;
+}
+/*按钮样式*/
+.button{
+	width:60px;
+	text-align:right;
+}
+.yuan_height{
+	height:30px;
+	background-color:#ffffff;
+}

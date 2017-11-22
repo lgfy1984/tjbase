@@ -1,0 +1,6 @@
+#adv {
+	MARGIN-RIGHT: 12px
+}
+DIV.maxmin {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; RIGHT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 8px; PADDING-TOP: 0px; POSITION: absolute; TOP: expression(document.documentElement.scrollTop + (Math.random() * 0)); HEIGHT: 100%
+}

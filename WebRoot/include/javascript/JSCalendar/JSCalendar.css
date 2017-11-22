@@ -1,0 +1,26 @@
+TABLE.calendar{ 
+		font-family : Tahoma; 
+		font-size : 10 ;
+		border-left:1px solid cccccc;
+		border-top:1px solid cccccc;
+		border-right:1px solid #888888;
+		border-bottom:1px solid #888888
+	}
+TD.lastMonth{ color:bbbbbb; } 
+TD.nextMonth{ color:bbbbbb; } 
+TD.normal{color:black;}
+TD.smallFont{font-size:9px;}
+TD.tdCurDate{background:url(bgCurDate.gif) no-repeat center center;color:white;}
+TD.tdToday{background:url(bgToday1.gif) no-repeat center center;color:black;}
+TD.tdTodayCurDate{background:url(bgToday2.gif) no-repeat center center;color:white;}
+TD.tdHoliday{ color:red; }
+TD,input{
+	font-size:12px;
+}
+table.title_bar{
+	background-color:#3366CC;	
+}
+TD.title{
+	color:#ffffff;
+	width:20px;
+}

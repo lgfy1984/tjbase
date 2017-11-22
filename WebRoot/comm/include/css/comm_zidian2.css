@@ -1,0 +1,178 @@
+html *{
+	margin:0;
+	padding:0;
+}
+body *{
+	font-size:12px;
+	font-family:Arial;
+}
+body{
+	margin:0;
+	padding:0;
+	font-size:14px;	
+	}
+select{
+	vertical-align: middle;
+	}
+img{
+	vertical-align: middle;
+	}
+
+.table{
+	border:0;
+	text-align:center;
+	background-color:#BFBFBF;	
+	margin:0px auto;
+	}
+.list_title{
+	font-size:12px;
+	background-color:#ffffff;	
+	}	
+.list_nav{
+	height:25px;
+	font-family:Arial;
+	font-size:12px;
+
+	background:url(../../../include/images/bg.gif) repeat-x;	
+	}
+.list_nav td{
+	font-family:Arial;
+	font-size:12px;
+	position:relative;
+	}
+
+.list_neirong{
+	height:25px;	
+		
+	}
+.list_neirong td{
+	word-break:break-all;
+	}
+.more_td{
+	line-height:22px;
+	text-align:left;
+	padding:0px 5px;	
+	}
+
+
+.rt *{
+	display:block;
+	height: 1px;
+   	overflow: hidden;
+	background-color:#fff;
+	border-left:1px solid #bfbfbf;
+	border-right:1px solid #bfbfbf;
+}
+.rt{
+	display:block;
+	width:100%;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:5px;
+}
+
+.r1{
+	margin: 0 5px;
+	background-color:#bfbfbf;
+}
+.r2{
+	margin: 0 3px;
+	border-width:0px 2px;
+}
+.r3{
+	margin: 0 2px;
+}
+.r4{
+	margin: 0 1px;
+	height: 2px;
+}
+
+.table2,.table3,.table4,.table5,.table6,.table7,.table8{
+	border:0;
+	text-align:center;
+	background-color:#fff;
+	margin:0px auto;	
+	}
+.table2,.table3,.table4,.table5,.table6,.table7,.table8 td{
+	height:26px;
+	}
+.table2 input{	
+	width:100px;	
+	}
+.table3 input{	
+	width:65px;	
+	}
+.table3 select{
+	height:20px;
+	width:75px;	
+	}
+
+.table4 input{
+	width:80px;
+}
+.table4 select{
+	height:20px;
+	width:75px;	
+	}
+.table5 input{	
+	width:100px;	
+	}
+.table6 input{
+    width:100px;
+}
+.table7 input{
+	width:100px;
+}
+.table8 input{
+	width:100px;
+}
+.
+.jiacu{
+	 font-weight:bold;
+	 color:#999999;
+}
+#list_L{
+	width:4px;
+	background:url(../images/comm_left.gif) no-repeat 0px 0px;
+}
+.list_biaoti{	
+	font-weight:bold;
+	width:auto;
+	background:url(../images/comm_center.gif) repeat-x;
+	text-align:center;
+}
+#list_C{
+	width:6px;
+	background:url(../images/comm_right1.gif) no-repeat 0px 0px;
+}
+#list_R{
+	width:4px;
+	background:url(../images/comm_right.gif) no-repeat 0px 0px;
+}
+.list_cc{	
+	font-family:Arial;
+	font-weight:bold;
+	font-size:12px;
+	background:url(../images/comm_bai.gif) repeat-x 0px 0px;
+}
+.list_cc input{
+	font-family:Arial;
+	font-size:12px;
+	height:17px;	
+	lien-height:12px;
+	padding-top:1px;
+}
+
+.button{
+	width:60px;
+	text-align:right;
+}
+.yuan_height{
+	height:28px;
+	background-color:#ffffff;
+}
+
+.leftPadding{
+	text-align:left;
+	padding-left:10px;
+}

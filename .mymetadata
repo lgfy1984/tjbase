@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="tjbase"
+  id="myeclipse.1407205086975"
+  context-root="/tjbase"
+  j2ee-spec="5.0"
+  archive="tjbase.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

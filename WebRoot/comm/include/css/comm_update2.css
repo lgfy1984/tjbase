@@ -1,0 +1,60 @@
+html,body{
+	 margin:0;
+	 padding:0;
+	 font-size:14px;
+	 text-align:center;
+}
+body *{
+	font-size:14px;
+}
+.table{
+      border:0;
+      margin:0;
+      text-align:center;
+      background-color:#828283; 
+      width:829px;     
+      }
+.qian{
+	  background-color:#F7F7F7;
+	  width:130px;
+	  height:30px;
+	  text-align:right;
+	  }
+
+.hou{
+	  background-color:#ffffff;
+      width:282px;
+	  height:30px;
+	}
+.hou2{
+	  background-color:#ffffff;
+	  height:30px;
+}
+.hou2 input{
+     width:664px;
+     font-size:14px; 
+}
+.baocun{
+	 height:28;
+     background-color:#ffffff;
+    }
+.biaoti{
+	 height:35px;
+     color:#000000;
+     background:url(../../../include/images/bg.gif) repeat-x;
+     text-align:center;
+     font-weight:bold;
+    }
+.beizhu{
+	 background-color:#ffffff;
+	 width:724px;
+	 height:30px;
+	}
+.kuandu{
+	 width:250px;
+     font-size:14px;                                                                      
+	}
+select{
+	width:255px;
+    font-size:14px;
+	}

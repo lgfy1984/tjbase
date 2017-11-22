@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- ******************commDictPublicClass*********start********************************************************* -->
+	<bean name="/comm/commDictPublicClass" class="com.tianjian.comm.struts.action.CommDictPublicClassAction" singleton="false">
+		<property name="commDictPublicClassService">
+			<ref bean="CommDictPublicClassService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="CommDictPublicClassService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommDictPublicClassServiceImpl">
+				<property name="commDictPublicClassDAO">
+					<ref bean="CommDictPublicClassDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommDictPublicClassDAO" class="com.tianjian.comm.dao.hibernate.CommDictPublicClassDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- *********************commDictPublicClass***********end*************************************************** -->
+	<bean name="/comm/commDictPublicChar" class="com.tianjian.comm.struts.action.CommDictPublicCharAction" singleton="false">
+		<property name="commDictPublicCharService">
+			<ref bean="CommDictPublicCharService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="CommDictPublicCharService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommDictPublicCharServiceImpl">
+				<property name="commDictPublicCharDAO">
+					<ref bean="CommDictPublicCharDAO" />
+				</property>
+				<property name="commDictPublicClassDAO">
+					<ref bean="CommDictPublicClassDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommDictPublicCharDAO" class="com.tianjian.comm.dao.hibernate.CommDictPublicCharDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- *******************************char  end*************************************************************** -->
+	<bean name="/comm/commDictPublicCharSingle" class="com.tianjian.comm.struts.action.CommDictPublicCharSingleAction" singleton="false">
+		<property name="commDictPublicCharSingleService">
+			<ref bean="CommDictPublicCharSingleService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="CommDictPublicCharSingleService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommDictPublicCharSingleServiceImpl">
+				<property name="commDictPublicCharDAO">
+					<ref bean="CommDictPublicCharDAO" />
+				</property>
+				<property name="commDictPublicClassDAO">
+					<ref bean="CommDictPublicClassDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- *******************************Int  start*************************************************************** -->
+	<bean name="/comm/commDictPublicInt" class="com.tianjian.comm.struts.action.CommDictPublicIntAction" singleton="false">
+		<property name="commDictPublicIntService">
+			<ref bean="CommDictPublicIntService" />
+		</property>
+	</bean>
+	<bean id="CommDictPublicIntService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommDictPublicIntServiceImpl">
+				<property name="commDictPublicIntDAO">
+					<ref bean="CommDictPublicIntDAO" />
+				</property>
+				<property name="commDictPublicClassDAO">
+					<ref bean="CommDictPublicClassDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommDictPublicIntDAO" class="com.tianjian.comm.dao.hibernate.CommDictPublicIntDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- *******************************Int  end*************************************************************** -->
+	<bean name="/comm/commDictPublicDouble" class="com.tianjian.comm.struts.action.CommDictPublicDoubleAction" singleton="false">
+		<property name="commDictPublicDoubleService">
+			<ref bean="CommDictPublicDoubleService" />
+		</property>
+	</bean>
+	<bean id="CommDictPublicDoubleService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommDictPublicDoubleServiceImpl">
+				<property name="commDictPublicDoubleDAO">
+					<ref bean="CommDictPublicDoubleDAO" />
+				</property>
+				<property name="commDictPublicClassDAO">
+					<ref bean="CommDictPublicClassDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommDictPublicDoubleDAO" class="com.tianjian.comm.dao.hibernate.CommDictPublicDoubleDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- *******************************Double  end*************************************************************** -->
+	<!-- *******************************Level  start*************************************************************** -->
+	<bean name="/comm/commDictPublicLevel" class="com.tianjian.comm.struts.action.CommDictPublicLevelAction" singleton="false">
+		<property name="commDictPublicLevelService">
+			<ref bean="CommDictPublicLevelService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="CommDictPublicLevelService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommDictPublicLevelServiceImpl">
+				<property name="commDictPublicLevelDAO">
+					<ref bean="CommDictPublicLevelDAO" />
+				</property>
+				<property name="commDictPublicClassDAO">
+					<ref bean="CommDictPublicClassDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommDictPublicLevelDAO" class="com.tianjian.comm.dao.hibernate.CommDictPublicLevelDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- *******************************Level  end*************************************************************** -->
+	<!-- *******************************LevelSingle  start*************************************************************** -->
+	<bean name="/comm/commDictPublicLevelSingle" class="com.tianjian.comm.struts.action.CommDictPublicLevelSingleAction" singleton="false">
+		<property name="commDictPublicLevelSingleService">
+			<ref bean="CommDictPublicLevelSingleService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<bean id="CommDictPublicLevelSingleService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommDictPublicLevelSingleServiceImpl">
+				<property name="commDictPublicLevelDAO">
+					<ref bean="CommDictPublicLevelDAO" />
+				</property>
+				<property name="commDictPublicClassDAO">
+					<ref bean="CommDictPublicClassDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- *******************************LevelSingle  end*************************************************************** -->
+	<bean id="CommTableDateIdService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommTableDateIdServiceImpl">
+				<property name="dao">
+					<ref bean="CommTableDateIdDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="CommTableDateIdDAO" class="com.tianjian.comm.dao.hibernate.CommTableDateIdDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- *******************************CommTableDateId  end*************************************************************** -->
+	<bean id="ilistlogicservice" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.ListLogicServiceImpl">
+				<property name="dao">
+					<ref local="listdao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="listdao" class="com.tianjian.comm.dao.hibernate.DictListDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- ******************commConfigInputDict2*********start*************************************************-->
+	<bean name="/comm/commConfigInputDict" class="com.tianjian.comm.struts.action.CommConfigInputDict2Action" singleton="false">
+		<property name="commConfigInputDict2Service">
+			<ref bean="commConfigInputDict2Service"/>
+		</property>
+	</bean>
+	<bean id="commConfigInputDict2Service" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.comm.business.service.CommConfigInputDict2ServiceImpl">
+				<property name="commConfigInputDictDAO">
+					<ref bean="commConfigInputDictDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="commConfigInputDictDAO" class="com.tianjian.comm.dao.hibernate.CommConfigInputDict2DAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+<!-- ******************commConfigInputDict2*********end********************************************************* -->
+
+</beans>

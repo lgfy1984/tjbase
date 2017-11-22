@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 核心框架的卫生机构弹出窗 start -->
+	<bean name="/hsp/hspConfigBaseinfoBase" class="com.tianjian.hsp.struts.action.HspConfigBaseinfoLocalBaseAction">
+		<property name="hspConfigBaseinfoBaseService">
+			<ref local="hspConfigBaseinfoBaseService"/>
+		</property>
+	</bean>
+	<bean id="hspConfigBaseinfoBaseService" parent="BaseTxService">
+		<property name="target">
+			<bean
+				class="com.tianjian.hsp.business.service.HspConfigBaseinfoLocalBaseServiceImpl">
+				<property name="hspConfigBaseinfoBaseDAO">
+					<ref local="hspConfigBaseinfoBaseDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="hspConfigBaseinfoBaseDAO"
+		class="com.tianjian.hsp.dao.hibernate.HspConfigBaseinfoLocalBaseDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 核心框架的卫生机构弹出窗 end -->
+	<!-- 核心框架的卫生人员弹出窗 start -->
+	<bean name="/hsp/hspStaffBaseinfoLocalBase" class="com.tianjian.hsp.struts.action.HspStaffBaseinfoLocalBaseAction">
+		<property name="hspStaffBaseinfoLocalBaseService">
+			<ref local="hspStaffBaseinfoLocalBaseService"/>
+		</property>
+	</bean>
+	<bean id="hspStaffBaseinfoLocalBaseService" parent="BaseTxService">
+		<property name="target">
+			<bean
+				class="com.tianjian.hsp.business.service.HspStaffBaseinfoLocalBaseServiceImpl">
+				<property name="hspStaffBaseinfoLocalBaseDAO">
+					<ref local="hspStaffBaseinfoLocalBaseDAO" />
+				</property>
+				<property name="commonDAO">
+					<ref bean="CommonDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="hspStaffBaseinfoLocalBaseDAO"
+		class="com.tianjian.hsp.dao.hibernate.HspStaffBaseinfoLocalBaseDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 核心框架的卫生人员弹出窗 end -->
+</beans>

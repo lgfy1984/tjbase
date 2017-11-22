@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link type="text/css" rev="stylesheet" rel="stylesheet" href="css/form.css" />
+
+</head>
+
+<body>
+<table border="0" cellpadding="0" cellspacing="0" class="tblFill">
+  <tr>
+    <td class="tblTitle" colspan="4"><span>※</span>  Ingrese el medicamento entrante al inventario   <span>※</span></td>
+  </tr>
+  <tr>
+    <td class="tblLable"><span>*</span>Nombre del Hospital:</td>
+    <td><input type="text" name="textfield" id="textfield" /></td>
+    <td class="tblLable"><span>*</span>Responsable:</td>
+    <td><input type="text" name="textfield2" id="textfield2" /></td>
+  </tr>
+  <tr>
+    <td class="tblLable">Tipo de Entrada:</td>
+    <td colspan="3"><select name="select" id="select">
+    </select></td>
+  </tr>
+  <tr>
+    <td class="tblLable">Fecha de Entrada:</td>
+    <td colspan="3"><input type="text" name="textfield3" id="textfield3" /></td>
+  </tr>
+  <tr>
+    <td class="tblLable">Observaciones:</td>
+    <td colspan="3"><textarea name="textarea" id="textarea" cols="45" rows="5"></textarea></td>
+  </tr>
+  <tr>
+    <td class="tblLable">Codigo de Barra:</td>
+    <td colspan="3"><input type="text" name="textfield4" id="textfield4" />
+    <span class="tblEm">* Escanee el codigo barra del insumo o medicamento a ingresar en el inventario</span></td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="tblList">
+  <tr>
+    <td colspan="9" class="tblTitle"><input name="checkAll" id="checkAll" onclick="ChkAllClick('checkItem','checkAll')" type="checkbox" />Seleccione todo  <input name="uncheckAll" id="uncheckAll" onclick="ChkOppClick('checkItem')" type="checkbox" />
+Seleccione inversamente  <img src="images/cmdDelBatch.jpg" alt="Elimine el lote " border="0" onclick="deleRowBatch('checkItem')" /></td>
+  </tr>
+  <tr class="lstName">
+    <td>Seleccione</td>
+    <td>Nombre del Medicamento</td>
+    <td>Concentración </td>
+    <td>Forma Farmacéutica</td>
+    <td>Presentación</td>
+    <td><span>*</span>Cantidad</td>
+    <td>Fecha de Elaboración</td>
+    <td>Fecha de Vencimiento</td>
+    <td>Borre un solo registro </td>
+  </tr>
+  <tr>
+    <td>PDY033938</td>
+    <td>Victorino Santaella Ruiz</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="intervalRow">
+    <td>447720215</td>
+    <td>Centro de salud de Caserío de Junshan de Municipio de Anren</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>447720231</td>
+    <td>Centro de salud de pueblo de Longhai de Municipio de Anren</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="intervalRow">
+    <td>447720055</td>
+    <td>Centro de salud de Pueblo de Guan de Municipio de Anren</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="9" class="footer">Pagina 0 /Total Pagina(s) 0 - 0 Registros encontrados | <img src="images/shouye_s.gif" align="middle" border="0px" />  <img src="images/shang_s.gif" align="middle" border="0px" />  <img src="images/xia_x.gif" align="middle" border="0px" />  <img src="images/mo_m.gif" align="middle" border="0px" />     						|  Pagina
+      <input id="_tp" name="page" value="0" size="2" type="text" /> <img src="images/go.jpg" onclick="goPage2()" border="0" width="18" /></td>
+  </tr>
+</table>
+<div class="btnSave"><input name="" type="button" value="Guardar" /></div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+.lab_report_div{
+	border: 1px solid black;
+}
+.margin_right_5{
+	margin-right: 5%;
+}
+.margin_left_5{
+	margin-left: 5%;
+}
+.lab_detail_div{
+	height: 100px;
+}
+.lab_detail_div table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.lab_detail_div table th{
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.div_width_100 .div_left #right_button,.div_width_100 .div_left #left_button{
+	border:none;
+	background:none;
+	background-image: url(../include/images/arrow_right.png);
+	background-repeat:no-repeat;
+	cursor:pointer;
+	height:30px;
+	width:30px;
+	text-align:left;
+	padding:0px;
+	font-size:0px;
+	margin-top:100px;
+	margin-left:20px;
+	outline:none;
+ 
+  }
+ .div_width_100 .div_left #left_button{
+	background-image: url(../include/images/arrow_left.png);
+	margin-left:auto;
+	margin-right:20px;
+	margin-top:90px;
+ }
+.lab_item_name{
+ 	text-decoration: underline;
+ }
+.lab_item_name:HOVER{
+ 	cursor: pointer;
+ 	color: #009DD9;
+ }
+ .kbm_content_div{
+ 	width: 100%;
+ }
+.kbm_table_label{
+	width: 15%;
+}
+.kbs_content_div label{
+	font-weight: bold;
+}

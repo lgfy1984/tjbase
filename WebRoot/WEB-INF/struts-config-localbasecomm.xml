@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="commDictPublicClassForm"
+			type="com.tianjian.comm.struts.form.CommDictPublicClassForm" />
+		<form-bean name="commDictPublicCharForm"
+			type="com.tianjian.comm.struts.form.CommDictPublicCharForm" />
+		<form-bean name="commDictPublicIntForm"
+			type="com.tianjian.comm.struts.form.CommDictPublicIntForm" />
+		<form-bean name="commDictPublicDoubleForm"
+			type="com.tianjian.comm.struts.form.CommDictPublicDoubleForm" />
+		<form-bean name="commDictPublicLevelForm"
+			type="com.tianjian.comm.struts.form.CommDictPublicLevelForm" />
+		<form-bean name="commConfigInputDict"
+			type="com.tianjian.comm.struts.form.CommConfigInputDictForm" />
+	</form-beans>
+	<global-forwards>
+		<forward name="noLogin" path="/home/nologin.jsp" />
+		<forward name="fail" path="/include/error/fail.jsp" />
+	</global-forwards>
+	<action-mappings>
+		<action path="/comm/commDictPublicClass" name="commDictPublicClassForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commdictpublicclass/list.jsp" />
+			<forward name="add" path="/comm/commdictpublicclass/add.jsp" />
+			<forward name="update" path="/comm/commdictpublicclass/update.jsp" />
+			<forward name="detail" path="/comm/commdictpublicclass/detail.jsp" />
+			<forward name="queryDetail" path="/comm/commdictpublicclass/listdetail.jsp" />
+		</action>
+		<action path="/comm/commDictPublicChar" name="commDictPublicCharForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commdictpublicchar/list.jsp" />
+			<forward name="add" path="/comm/commdictpublicchar/add.jsp" />
+			<forward name="update" path="/comm/commdictpublicchar/update.jsp" />
+			<forward name="detail" path="/comm/commdictpublicchar/detail.jsp" />
+			<forward name="queryDetail" path="/comm/commdictpublicchar/listdetail.jsp" />
+
+		</action>
+		<action path="/comm/commDictPublicCharSingle" name="commDictPublicCharForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commdictpubliccharsingle/list.jsp" />
+			<forward name="add" path="/comm/commdictpubliccharsingle/add.jsp" />
+			<forward name="update" path="/comm/commdictpubliccharsingle/update.jsp" />
+			<forward name="detail" path="/comm/commdictpubliccharsingle/detail.jsp" />
+		</action>
+		<action path="/comm/commDictPublicInt" name="commDictPublicIntForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commdictpublicint/list.jsp" />
+			<forward name="add" path="/comm/commdictpublicint/add.jsp" />
+			<forward name="update" path="/comm/commdictpublicint/update.jsp" />
+			<forward name="detail" path="/comm/commdictpublicint/detail.jsp" />
+			<forward name="queryDetail" path="/comm/commdictpublicint/listdetail.jsp" />
+		</action>
+		<action path="/comm/commDictPublicDouble" name="commDictPublicDoubleForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commdictpublicdouble/list.jsp" />
+			<forward name="add" path="/comm/commdictpublicdouble/add.jsp" />
+			<forward name="update" path="/comm/commdictpublicdouble/update.jsp" />
+			<forward name="detail" path="/comm/commdictpublicdouble/detail.jsp" />
+			<forward name="queryDetail" path="/comm/commdictpublicdouble/listdetail.jsp" />
+		</action>
+		<action path="/comm/commDictPublicLevel" name="commDictPublicLevelForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commdictpubliclevel/list.jsp" />
+			<forward name="add" path="/comm/commdictpubliclevel/add.jsp" />
+			<forward name="update" path="/comm/commdictpubliclevel/update.jsp" />
+			<forward name="detail" path="/comm/commdictpubliclevel/detail.jsp" />
+			<forward name="queryDetail" path="/comm/commdictpubliclevel/listdetail.jsp" />
+		</action>
+		<action path="/comm/commDictPublicLevelSingle" name="commDictPublicLevelForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commdictpubliclevelsingle/list.jsp" />
+			<forward name="add" path="/comm/commdictpubliclevelsingle/add.jsp" />
+			<forward name="update" path="/comm/commdictpubliclevelsingle/update.jsp" />
+			<forward name="detail" path="/comm/commdictpubliclevelsingle/detail.jsp" />
+		</action>
+		<action path="/comm/commConfigInputDict" name="commConfigInputDict"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfiginputdict/list.jsp" />
+			<forward name="add" path="/comm/commconfiginputdict/add.jsp" />
+			<forward name="update" path="/comm/commconfiginputdict/update.jsp" />
+			<forward name="detail" path="/comm/commconfiginputdict/detail.jsp" />
+			<forward name="queryDetail" path="/comm/commconfiginputdict/listdetail.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+	<message-resources key="comm.commLocale" parameter="conf.comm.CommLocale" />
+</struts-config>

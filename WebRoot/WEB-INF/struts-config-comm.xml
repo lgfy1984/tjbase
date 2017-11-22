@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<!-- 国家基本药物目录药品类别 -->
+		<form-bean name="commConfigGbDrugclassForm"
+			type="com.tianjian.comm.struts.form.CommConfigGbDrugclassForm" />
+		<form-bean name="commConfigCountryForm"
+			type="com.tianjian.comm.struts.form.CommConfigCountryForm" />
+		<form-bean name="commConfigAboForm"
+			type="com.tianjian.comm.struts.form.CommConfigAboForm" />
+		<form-bean name="commConfigDegreeForm"
+			type="com.tianjian.comm.struts.form.CommConfigDegreeForm" />
+		<form-bean name="commConfigEmptitleForm"
+			type="com.tianjian.comm.struts.form.CommConfigEmptitleForm" />
+		<form-bean name="commConfigIdTypeForm"
+			type="com.tianjian.comm.struts.form.CommConfigIdTypeForm" />
+		<form-bean name="commConfigMaritalStatusForm"
+			type="com.tianjian.comm.struts.form.CommConfigMaritalStatusForm" />
+		<form-bean name="commConfigNationalityForm"
+			type="com.tianjian.comm.struts.form.CommConfigNationalityForm" />
+		<form-bean name="commConfigProfessionForm"
+			type="com.tianjian.comm.struts.form.CommConfigProfessionForm" />
+		<form-bean name="commConfigRelationshipForm"
+			type="com.tianjian.comm.struts.form.CommConfigRelationshipForm" />
+		<form-bean name="commConfigRhForm"
+			type="com.tianjian.comm.struts.form.CommConfigRhForm" />
+		<form-bean name="commConfigSexForm"
+			type="com.tianjian.comm.struts.form.CommConfigSexForm" />
+		<form-bean name="commConfigClinicattrForm"
+			type="com.tianjian.comm.struts.form.CommConfigClinicattrForm" />
+		<form-bean name="commConfigDeptForm"
+			type="com.tianjian.comm.struts.form.CommConfigDeptForm" />
+		<form-bean name="commConfigDepttypeForm"
+			type="com.tianjian.comm.struts.form.CommConfigDepttypeForm" />
+		<form-bean name="commConfigEconkindForm"
+			type="com.tianjian.comm.struts.form.CommConfigEconkindForm" />
+		<form-bean name="commConfigStafftypeForm"
+			type="com.tianjian.comm.struts.form.CommConfigStafftypeForm" />
+		<form-bean name="commConfigUnittypeForm"
+			type="com.tianjian.comm.struts.form.CommConfigUnittypeForm" />
+		<form-bean name="commConfigUnitgradeForm"
+			type="com.tianjian.comm.struts.form.CommConfigUnitgradeForm" />
+		<form-bean name="commConfigLocationForm"
+			type="com.tianjian.comm.struts.form.CommConfigLocationForm" />
+		<form-bean name="commConfigCardorgForm"
+			type="com.tianjian.comm.struts.form.CommConfigCardorgForm" />
+		<form-bean name="commConfigCardtypeForm"
+			type="com.tianjian.comm.struts.form.CommConfigCardtypeForm" />
+		<form-bean name="commGbCoptpForm"
+			type="com.tianjian.comm.struts.form.CommGbCoptpForm" />
+		<form-bean name="commConfigIcd10"
+			type="com.tianjian.comm.struts.form.CommConfigIcd10Form" />
+
+		<!-- 机构类别字典 -->
+		<form-bean name="CommConfigHospitalType"
+			type="com.tianjian.comm.struts.form.CommConfigHospitalTypeForm" />
+		<!-- 学位字典 -->
+		<form-bean name="commConfigDegreeLevelForm"
+			type="com.tianjian.comm.struts.form.CommConfigDegreeLevelForm" />
+		<!-- 行政职务字典 -->
+		<form-bean name="commConfigPositiontitleForm"
+			type="com.tianjian.comm.struts.form.CommConfigPositiontitleForm" />
+		<!-- COMM_CONFIG_LOCATION_TOWN乡镇字典 -->
+		<form-bean name="commConfigLocationTown"
+			type="com.tianjian.comm.struts.form.CommConfigLocationTownForm" />
+		<!-- COMM_CONFIG_LOCATION_VILLAGE村字典 -->
+		<form-bean name="commConfigLocationVillage"
+			type="com.tianjian.comm.struts.form.CommConfigLocationVillageForm" />
+		<!-- COMM_CONFIG_LOCATION_GROUP居民组字典 -->
+		<form-bean name="commConfigLocationGroup"
+			type="com.tianjian.comm.struts.form.CommConfigLocationGroupForm" />
+		<!-- 机构分类管理字典 -->
+		<form-bean name="commConfigFtManageForm"
+			type="com.tianjian.comm.struts.form.CommConfigFtManageForm" />
+		<form-bean name="commConfigVocation"
+			type="com.tianjian.comm.struts.form.CommConfigVocationForm" />
+		<form-bean name="commConfigHave"
+			type="com.tianjian.comm.struts.form.CommConfigHaveForm" />
+		<form-bean name="commConfigTrue"
+			type="com.tianjian.comm.struts.form.CommConfigTrueForm" />
+		<form-bean name="commConfigNormal"
+			type="com.tianjian.comm.struts.form.CommConfigNormalForm" />
+		<form-bean name="commConfigYes"
+			type="com.tianjian.comm.struts.form.CommConfigYesForm" />
+		<!-- 独立业务系统类型字典 -->
+		<form-bean name="commConfigSystemtypeForm"
+			type="com.tianjian.comm.struts.form.CommConfigSystemtypeForm" />
+
+		<form-bean name="commPopulationNatureForm"
+			type="com.tianjian.comm.struts.form.CommConfigPopulationNatureForm" />
+		<form-bean name="commCongihMidwiferyForm"
+			type="com.tianjian.comm.struts.form.CommCongihMidwiferyForm" />
+		<form-bean name="commConfigHospitalClassForm"
+			type="com.tianjian.comm.struts.form.CommConfigHospitalClassForm" />
+	</form-beans>
+	<global-forwards>
+		<forward name="noLogin" path="/home/nologin.jsp" />
+		<forward name="fail" path="/include/error/fail.jsp" />
+	</global-forwards>
+	<action-mappings>
+		<action path="/comm/commConfigHospitalClass" name="commConfigHospitalClassForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="list" path="/comm/commconfighospitalclass/list.jsp" />
+			<forward name="add" path="/comm/commconfighospitalclass/add.jsp" />
+			<forward name="detail" path="/comm/commconfighospitalclass/detail.jsp" />
+		</action>
+		<action path="/comm/commPopulationNature" name="commPopulationNatureForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="list" path="/comm/commconfigpopulationnature/list.jsp" />
+			<forward name="add" path="/comm/commconfigpopulationnature/add.jsp" />
+			<forward name="detail" path="/comm/commconfigpopulationnature/detail.jsp" />
+		</action>
+		<action path="/comm/commCongihMidwifery" name="commCongihMidwiferyForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="list" path="/comm/commcongihmidwifery/list.jsp" />
+			<forward name="add" path="/comm/commcongihmidwifery/add.jsp" />
+		</action>
+		<!-- 国家基本药物目录药品类别 -->
+		<action path="/comm/commConfigGbDrugclass" name="commConfigGbDrugclassForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commConfigGbDrugclass/list.jsp" />
+			<forward name="add" path="/comm/commConfigGbDrugclass/add.jsp" />
+			<forward name="update" path="/comm/commConfigGbDrugclass/update.jsp" />
+			<forward name="detail" path="/comm/commConfigGbDrugclass/detail.jsp" />
+			<forward name="change" path="/comm/commConfigGbDrugclass/change.jsp" />
+		</action>
+
+		<action path="/comm/commConfigGbDrugclassView" name="commConfigGbDrugclassForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commConfigGbDrugclassView/list.jsp" />
+			<forward name="detail" path="/comm/commConfigGbDrugclassView/detail.jsp" />
+		</action>
+
+		<action path="/comm/commConfigCountry" name="commConfigCountryForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigcountry/list.jsp" />
+			<forward name="add" path="/comm/commconfigcountry/add.jsp" />
+			<forward name="update" path="/comm/commconfigcountry/update.jsp" />
+			<forward name="detail" path="/comm/commconfigcountry/detail.jsp" />
+
+
+			<forward name="queryDetail" path="/comm/commconfigcountry/listdetail.jsp" />
+		</action>
+		<action path="/comm/commConfigAbo" name="commConfigAboForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigabo/list.jsp" />
+			<forward name="add" path="/comm/commconfigabo/add.jsp" />
+			<forward name="update" path="/comm/commconfigabo/update.jsp" />
+			<forward name="detail" path="/comm/commconfigabo/detail.jsp" />
+
+
+			<forward name="queryDetail" path="/comm/commconfigabo/listdetail.jsp" />
+		</action>
+		<action path="/comm/commConfigDegree" name="commConfigDegreeForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigdegree/list.jsp" />
+			<forward name="add" path="/comm/commconfigdegree/add.jsp" />
+			<forward name="update" path="/comm/commconfigdegree/update.jsp" />
+			<forward name="detail" path="/comm/commconfigdegree/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commConfigEmptitle" name="commConfigEmptitleForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigemptitle/list.jsp" />
+			<forward name="add" path="/comm/commconfigemptitle/add.jsp" />
+			<forward name="update" path="/comm/commconfigemptitle/update.jsp" />
+			<forward name="detail" path="/comm/commconfigemptitle/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commConfigIdType" name="commConfigIdTypeForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigidtype/list.jsp" />
+			<forward name="add" path="/comm/commconfigidtype/add.jsp" />
+			<forward name="update" path="/comm/commconfigidtype/update.jsp" />
+			<forward name="detail" path="/comm/commconfigidtype/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commConfigMaritalStatus" name="commConfigMaritalStatusForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigmaritalstatus/list.jsp" />
+			<forward name="add" path="/comm/commconfigmaritalstatus/add.jsp" />
+			<forward name="update" path="/comm/commconfigmaritalstatus/update.jsp" />
+			<forward name="detail" path="/comm/commconfigmaritalstatus/detail.jsp" />
+
+
+			<forward name="queryDetail" path="/comm/commconfigmaritalstatus/listdetail.jsp" />
+		</action>
+		<action path="/comm/commConfigNationality" name="commConfigNationalityForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfignationality/list.jsp" />
+			<forward name="add" path="/comm/commconfignationality/add.jsp" />
+			<forward name="update" path="/comm/commconfignationality/update.jsp" />
+			<forward name="detail" path="/comm/commconfignationality/detail.jsp" />
+
+
+			<forward name="queryDetail" path="/comm/commconfignationality/listdetail.jsp" />
+		</action>
+		<action path="/comm/commConfigProfession" name="commConfigProfessionForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigprofession/list.jsp" />
+			<forward name="add" path="/comm/commconfigprofession/add.jsp" />
+			<forward name="update" path="/comm/commconfigprofession/update.jsp" />
+			<forward name="detail" path="/comm/commconfigprofession/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commConfigRelationship" name="commConfigRelationshipForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigrelationship/list.jsp" />
+			<forward name="add" path="/comm/commconfigrelationship/add.jsp" />
+			<forward name="update" path="/comm/commconfigrelationship/update.jsp" />
+			<forward name="detail" path="/comm/commconfigrelationship/detail.jsp" />
+
+
+			<forward name="queryDetail" path="/comm/commconfigrelationship/listdetail.jsp" />
+		</action>
+		<action path="/comm/commConfigRh" name="commConfigRhForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigrh/list.jsp" />
+			<forward name="add" path="/comm/commconfigrh/add.jsp" />
+			<forward name="update" path="/comm/commconfigrh/update.jsp" />
+			<forward name="detail" path="/comm/commconfigrh/detail.jsp" />
+
+
+			<forward name="queryDetail" path="/comm/commconfigrh/listdetail.jsp" />
+		</action>
+		<action path="/comm/commConfigSex" name="commConfigSexForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigsex/list.jsp" />
+			<forward name="add" path="/comm/commconfigsex/add.jsp" />
+			<forward name="update" path="/comm/commconfigsex/update.jsp" />
+			<forward name="detail" path="/comm/commconfigsex/detail.jsp" />
+
+
+			<forward name="queryDetail" path="/comm/commconfigsex/listdetail.jsp" />
+		</action>
+		<action path="/comm/commConfigClinicattr" name="commConfigClinicattrForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigclinicattr/list.jsp" />
+			<forward name="add" path="/comm/commconfigclinicattr/add.jsp" />
+			<forward name="update" path="/comm/commconfigclinicattr/update.jsp" />
+			<forward name="detail" path="/comm/commconfigclinicattr/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commConfigDept" name="commConfigDeptForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigdept/list.jsp" />
+			<forward name="add" path="/comm/commconfigdept/add.jsp" />
+			<forward name="update" path="/comm/commconfigdept/update.jsp" />
+			<forward name="detail" path="/comm/commconfigdept/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commConfigDepttype" name="commConfigDepttypeForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigdepttype/list.jsp" />
+			<forward name="add" path="/comm/commconfigdepttype/add.jsp" />
+			<forward name="update" path="/comm/commconfigdepttype/update.jsp" />
+			<forward name="detail" path="/comm/commconfigdepttype/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commConfigEconkind" name="commConfigEconkindForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigeconkind/list.jsp" />
+			<forward name="add" path="/comm/commconfigeconkind/add.jsp" />
+			<forward name="update" path="/comm/commconfigeconkind/update.jsp" />
+			<forward name="detail" path="/comm/commconfigeconkind/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commConfigStafftype" name="commConfigStafftypeForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigstafftype/list.jsp" />
+			<forward name="add" path="/comm/commconfigstafftype/add.jsp" />
+			<forward name="update" path="/comm/commconfigstafftype/update.jsp" />
+			<forward name="detail" path="/comm/commconfigstafftype/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commConfigUnittype" name="commConfigUnittypeForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigunittype/list.jsp" />
+			<forward name="add" path="/comm/commconfigunittype/add.jsp" />
+			<forward name="update" path="/comm/commconfigunittype/update.jsp" />
+			<forward name="detail" path="/comm/commconfigunittype/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commConfigUnitgrade" name="commConfigUnitgradeForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigunitgrade/list.jsp" />
+			<forward name="add" path="/comm/commconfigunitgrade/add.jsp" />
+			<forward name="update" path="/comm/commconfigunitgrade/update.jsp" />
+			<forward name="detail" path="/comm/commconfigunitgrade/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commConfigLocation" name="commConfigLocationForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfiglocation/list.jsp" />
+			<forward name="add" path="/comm/commconfiglocation/add.jsp" />
+			<forward name="update" path="/comm/commconfiglocation/update.jsp" />
+			<forward name="detail" path="/comm/commconfiglocation/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commConfigCardorg" name="commConfigCardorgForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigcardorg/list.jsp" />
+			<forward name="add" path="/comm/commconfigcardorg/add.jsp" />
+			<forward name="update" path="/comm/commconfigcardorg/update.jsp" />
+			<forward name="detail" path="/comm/commconfigcardorg/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commConfigCardtype" name="commConfigCardtypeForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigcardtype/list.jsp" />
+			<forward name="add" path="/comm/commconfigcardtype/add.jsp" />
+			<forward name="update" path="/comm/commconfigcardtype/update.jsp" />
+			<forward name="detail" path="/comm/commconfigcardtype/detail.jsp" />
+
+
+		</action>
+		<action path="/comm/commGbCoptp" name="commGbCoptpForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commgbcoptp/list.jsp" />
+			<forward name="add" path="/comm/commgbcoptp/add.jsp" />
+			<forward name="update" path="/comm/commgbcoptp/update.jsp" />
+			<forward name="detail" path="/comm/commgbcoptp/detail.jsp" />
+
+
+		</action>
+
+		<!-- 机构类别字典 -->
+		<action path="/comm/commConfigHospitalType" name="CommConfigHospitalType"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfighospitaltype/list.jsp" />
+			<forward name="add" path="/comm/commconfighospitaltype/add.jsp" />
+			<forward name="update" path="/comm/commconfighospitaltype/update.jsp" />
+			<forward name="detail" path="/comm/commconfighospitaltype/detail.jsp" />
+		</action>
+		<!-- 机构分类管理字典 -->
+		<action path="/comm/commConfigFtManage" name="commConfigFtManageForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commConfigFtManage/list.jsp" />
+			<forward name="add" path="/comm/commConfigFtManage/add.jsp" />
+			<forward name="update" path="/comm/commConfigFtManage/update.jsp" />
+			<forward name="detail" path="/comm/commConfigFtManage/detail.jsp" />
+		</action>
+		<!--行政职务字典 -->
+		<action path="/comm/commConfigPositiontitle" name="commConfigPositiontitleForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="add" path="/comm/commConfigPositiontitle/add.jsp" />
+			<forward name="query" path="/comm/commConfigPositiontitle/list.jsp" />
+			<forward name="update" path="/comm/commConfigPositiontitle/update.jsp" />
+			<forward name="detail" path="/comm/commConfigPositiontitle/detail.jsp" />
+		</action>
+		<!--学位字典 -->
+		<action path="/comm/commConfigDegreeLevel" name="commConfigDegreeLevelForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="add" path="/comm/commconfigdegreelevel/add.jsp" />
+			<forward name="query" path="/comm/commconfigdegreelevel/list.jsp" />
+			<forward name="update" path="/comm/commconfigdegreelevel/update.jsp" />
+			<forward name="detail" path="/comm/commconfigdegreelevel/detail.jsp" />
+		</action>
+		<!-- COMM_CONFIG_LOCATION_TOWN乡镇字典 -->
+		<action path="/comm/commConfigLocationTown" name="commConfigLocationTown"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commConfigLocationTown/list.jsp" />
+			<forward name="add" path="/comm/commConfigLocationTown/add.jsp" />
+			<forward name="update" path="/comm/commConfigLocationTown/update.jsp" />
+			<forward name="detail" path="/comm/commConfigLocationTown/detail.jsp" />
+		</action>
+		<!-- COMM_CONFIG_LOCATION_VILLAGE村字典 -->
+		<action path="/comm/commConfigLocationVillage" name="commConfigLocationVillage"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commConfigLocationVillage/list.jsp" />
+			<forward name="add" path="/comm/commConfigLocationVillage/add.jsp" />
+			<forward name="update" path="/comm/commConfigLocationVillage/update.jsp" />
+			<forward name="detail" path="/comm/commConfigLocationVillage/detail.jsp" />
+		</action>
+		<!-- COMM_CONFIG_LOCATION_GROUP居民组字典 -->
+		<action path="/comm/commConfigLocationGroup" name="commConfigLocationGroup"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commConfigLocationGroup/list.jsp" />
+			<forward name="add" path="/comm/commConfigLocationGroup/add.jsp" />
+			<forward name="update" path="/comm/commConfigLocationGroup/update.jsp" />
+			<forward name="detail" path="/comm/commConfigLocationGroup/detail.jsp" />
+		</action>
+		<!-- 职业 -->
+		<action path="/comm/commConfigVocation" name="commConfigVocation"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigvocation/list.jsp" />
+			<forward name="add" path="/comm/commconfigvocation/add.jsp" />
+			<forward name="update" path="/comm/commconfigvocation/update.jsp" />
+			<forward name="detail" path="/comm/commconfigvocation/detail.jsp" />
+			<forward name="queryDetail" path="/comm/commconfigvocation/listdetail.jsp" />
+		</action>
+
+		<!-- True -->
+		<action path="/comm/commConfigTrue" name="commConfigTrue"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigtrue/list.jsp" />
+			<forward name="add" path="/comm/commconfigtrue/add.jsp" />
+			<forward name="update" path="/comm/commconfigtrue/update.jsp" />
+			<forward name="detail" path="/comm/commconfigtrue/detail.jsp" />
+			<forward name="queryDetail" path="/comm/commconfigtrue/listdetail.jsp" />
+		</action>
+		<!-- Have -->
+		<action path="/comm/commConfigHave" name="commConfigHave"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfighave/list.jsp" />
+			<forward name="add" path="/comm/commconfighave/add.jsp" />
+			<forward name="update" path="/comm/commconfighave/update.jsp" />
+			<forward name="detail" path="/comm/commconfighave/detail.jsp" />
+			<forward name="queryDetail" path="/comm/commconfighave/listdetail.jsp" />
+		</action>
+		<!-- Normal -->
+		<action path="/comm/commConfigNormal" name="commConfigNormal"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfignormal/list.jsp" />
+			<forward name="add" path="/comm/commconfignormal/add.jsp" />
+			<forward name="update" path="/comm/commconfignormal/update.jsp" />
+			<forward name="detail" path="/comm/commconfignormal/detail.jsp" />
+			<forward name="queryDetail" path="/comm/commconfignormal/listdetail.jsp" />
+		</action>
+
+		<!-- YES -->
+		<action path="/comm/commConfigYes" name="commConfigYes" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigyes/list.jsp" />
+			<forward name="add" path="/comm/commconfigyes/add.jsp" />
+			<forward name="update" path="/comm/commconfigyes/update.jsp" />
+			<forward name="detail" path="/comm/commconfigyes/detail.jsp" />
+			<forward name="queryDetail" path="/comm/commconfigyes/listdetail.jsp" />
+		</action>
+		<!-- 独立业务系统类型字典 -->
+		<action path="/comm/commConfigSystemtype" name="commConfigSystemtypeForm"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigsystemtype/list.jsp" />
+			<forward name="add" path="/comm/commconfigsystemtype/add.jsp" />
+			<forward name="update" path="/comm/commconfigsystemtype/update.jsp" />
+			<forward name="detail" path="/comm/commconfigsystemtype/detail.jsp" />
+		</action>
+
+		<!-- ICD10 -->
+		<action path="/comm/commConfigIcd10" name="commConfigIcd10"
+			scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigicd10/list.jsp" />
+			<forward name="add" path="/comm/commconfigicd10/add.jsp" />
+			<forward name="update" path="/comm/commconfigicd10/update.jsp" />
+			<forward name="detail" path="/comm/commconfigicd10/detail.jsp" />
+			<forward name="queryDetail" path="/comm/commconfigicd10/listdetail.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>

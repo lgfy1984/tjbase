@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!--**********************empi***********************start*************************-->
+	<bean id="securityUserBaseinfoService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.empi.business.service.SecurityUserBaseinfoServiceImpl">
+				<property name="securityUserBaseinfoDAO">
+					<ref bean="securityUserBaseinfoDAO"/>
+				</property>
+				<property name="commConfigVocationDAO">
+					<ref bean = "commConfigVocationDAO" />
+				</property>
+				<property name="commConfigYesDAO">
+					<ref bean = "commConfigYesDAO" />
+				</property>
+				<property name="commConfigSexDAO">
+					<ref bean="CommConfigSexDAO"/>
+				</property>
+				<property name="commConfigCountryDAO">
+					<ref bean="CommConfigCountryDAO"/>
+				</property>
+				<property name="commConfigNationalityDAO">
+					<ref bean="CommConfigNationalityDAO"/>
+				</property>
+				<property name="commConfigIdTypeDAO">
+					<ref bean="CommConfigIdTypeDAO"/>
+				</property>
+				<property name="commConfigAboDAO">
+					<ref bean="CommConfigAboDAO"/>
+				</property>
+				<property name="commConfigRhDAO">
+					<ref bean="CommConfigRhDAO"/>
+				</property>
+				<property name="commConfigDegreeDAO">
+					<ref bean="CommConfigDegreeDAO"/>
+				</property>
+				<property name="commConfigMaritalStatusDAO">
+					<ref bean="CommConfigMaritalStatusDAO"/>
+				</property>
+				<property name="commConfigLocationDAO">
+					<ref bean="CommConfigLocationDAO"/>
+				</property>
+				<property name="commConfigRelationshipDAO">
+					<ref bean="CommConfigRelationshipDAO"/>
+				</property>
+				<property name="commConfigInputDictService">
+					<ref bean="CommConfigInputDictService"/>
+				</property>
+				<property name="hspConfigBaseinfoDAO">
+					<ref bean="HspConfigBaseinfoDAO" />
+				</property>
+				<property name="commConfigTownDao">
+					<ref bean="commConfigLoactionTownDAO"/>
+				</property>
+				<property name="commConfigVillageDao">
+					<ref bean="commConfigLocationVillageDAO"/>
+				</property>
+				<property name="commConfigGroupDao">
+					<ref bean="commConfigLocationGroupDAO" />
+				</property>
+				<property name="commConfigCardtypeDAO">
+					<ref bean="CommConfigCardtypeDAO" />
+				</property>
+				<property name="commonDAO">
+					<ref bean="CommonDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="securityUserBaseinfoDAO" class="com.tianjian.empi.dao.hibernate.SecurityUserBaseinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<!-- 居民信息开始 -->
+	<bean name="/empi/securityUserBaseinfo" class="com.tianjian.empi.struts.action.SecurityUserBaseinfoAction" singleton="false">
+		<property name="service">
+			<ref bean="securityUserBaseinfoService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+</beans>

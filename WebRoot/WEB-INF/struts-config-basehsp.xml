@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+  <data-sources />
+  <form-beans >  
+  	<form-bean name="hspConfigBaseinfoform" type="com.tianjian.hsp.struts.form.HspConfigBaseinfoForm" />
+	<!--卫生人力基本信息-->
+	<form-bean name="hspStaffBaseinfoForm" type="com.tianjian.hsp.struts.form.HspStaffBaseinfoForm" />
+    <!-- 卫生机构自定义对照合并 -->
+    <form-bean name="hspConfigBaseinfoMergeForm" type="com.tianjian.hsp.struts.form.HspConfigBaseinfoMergeForm"/>
+    <!-- 卫生人力自定义对照合并 -->
+    <form-bean name="hspStaffBaseinfoMergeForm" type="com.tianjian.hsp.struts.form.HspStaffBaseinfoMergeForm"/>
+    
+    <form-bean name="healthRegisterTreeForm" type="com.tianjian.hsp.struts.form.HealthRegisterTreeForm"/>
+    <!-- 科室 -->
+   	 <form-bean name="orgMenuForm" type="com.tianjian.hsp.struts.form.OrgMenuForm"/>
+   	 <!-- 卫生设备 -->
+   	<form-bean name="hspEquipBaseinfoForm" type="com.tianjian.hsp.struts.form.HspEquipBaseinfoForm"/>
+   	 
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >     
+  	   
+	   <action  name="hspConfigBaseinfoform" path="/hsp/hspConfigBaseinfo" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/hsp/hspconfigbaseinfo/list.jsp" />
+			<forward name="query4Web" path="/hsp/hspconfigbaseinfo/list4web.jsp" />
+			<forward name="add" path="/hsp/hspconfigbaseinfo/add.jsp" />			
+			<forward name="casedetail" path="/casehistory/hsp_detail.jsp" />
+			<forward name="update" path="/hsp/hspconfigbaseinfo/update.jsp" />
+			<forward name="detail" path="/hsp/hspconfigbaseinfo/detail.jsp" />
+			<forward name="elsExport" path="/hsp/hspconfigbaseinfo/list.jsp" />
+			<forward name="elsImport" path="/hsp/hspconfigbaseinfo/import.jsp" />
+			<forward name="queryDetail" path="/hsp/hspconfigbaseinfo/listdetail.jsp" />
+		</action>	
+		<!--卫生机构注销记录-->
+		<action name="hspConfigBaseinfoform" path="/hsp/hspLogoutRecord" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+		    <forward name="query" path="/hsp/hsplogoutrecord/list.jsp" />
+		    <forward name="queryDetail" path="/hsp/hsplogoutrecord/list.jsp" />
+		    <forward name="queryLogOut" path="/hsp/hsplogoutrecord/list.jsp" />
+		    <forward name="queryLogOutDetail" path="/hsp/hsplogoutrecord/list.jsp" />
+		    <forward name="addLogOutInit" path="/hsp/hsplogoutrecord/add.jsp" />
+		    <forward name="detail" path="/hsp/hspconfigbaseinfo/detail.jsp" />
+		    <forward name="detailLogOut" path="/hsp/hsplogoutrecord/detailLogOut.jsp" />
+		</action>
+		<!--卫生人力基本信息-->
+		<action name="hspStaffBaseinfoForm" path="/hsp/hspStaffBaseinfo" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="add" path="/hsp/hspstaffbaseinfo/add.jsp" />
+			<forward name="query" path="/hsp/hspstaffbaseinfo/list.jsp" />
+			<forward name="change" path="/hsp/hspstaffbaseinfo/change.jsp" />
+			<forward name="update" path="/hsp/hspstaffbaseinfo/update.jsp" />
+			<forward name="detail" path="/hsp/hspstaffbaseinfo/detail.jsp" />
+			<forward name="elsExport" path="/hsp/hspstaffbaseinfo/list.jsp" />
+			<forward name="elsImport" path="/hsp/hspstaffbaseinfo/import.jsp" />
+			<forward name="hspToSecurity" path="/security/securitystaffbaseinfo/hsptosecurity.jsp"></forward>
+			<forward name="queryDetail" path="/hsp/hspstaffbaseinfo/listdetail.jsp" />
+			<forward name="getXml" path="/hsp/hspstaffbaseinfo/listxml.jsp" />
+		</action>
+		<!--卫生人员注销记录-->
+		<action name="hspStaffBaseinfoForm" path="/hsp/hspStaffLogoutRecord" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+		    <forward name="query" path="/hsp/hspstafflogoutrecord/list.jsp" />
+		    <forward name="queryDetail" path="/hsp/hspstafflogoutrecord/list.jsp" />
+		    <forward name="queryLogOut" path="/hsp/hspstafflogoutrecord/list.jsp" />
+		    <forward name="queryLogOutDetail" path="/hsp/hspstafflogoutrecord/list.jsp" />
+		    <forward name="addLogOutInit" path="/hsp/hspstafflogoutrecord/add.jsp" />
+		    <forward name="detail" path="/hsp/hspstafflogoutrecord/detail.jsp" />
+		    <forward name="detailLogOut" path="/hsp/hspstafflogoutrecord/detailLogOut.jsp" />
+		</action>
+		
+		<!-- 卫生人力自定义对照合并 -->
+		<action path="/hsp/hspStaffBaseinfoMerge" name="hspStaffBaseinfoMergeForm"  scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query"    path="/hsp/hspstaffbaseinfomerge/query.jsp" />
+			<forward name="queryDetail"    path="/hsp/hspstaffbaseinfomerge/query.jsp" />
+			<forward name="compareQuery"    path="/hsp/hspstaffbaseinfomerge/queryList.jsp" />
+			<forward name="success" path="/hsp/hspstaffbaseinfomerge/success.jsp" />
+		</action>
+		<!-- 卫生机构自定义对照合并 -->
+		<action path="/hsp/hspConfigBaseinfoMerge" name="hspConfigBaseinfoMergeForm"  scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query"    path="/hsp/hspconfigbaseinfomerge/query.jsp" />
+			<forward name="queryDetail"    path="/hsp/hspconfigbaseinfomerge/query.jsp" />
+			<forward name="compareQuery"    path="/hsp/hspconfigbaseinfomerge/queryList.jsp" />
+			<forward name="success" path="/hsp/hspconfigbaseinfomerge/success.jsp" />
+		</action>
+		<action path="/hsp/healthRegisterTree" name="healthRegisterTreeForm"  scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="deptDetail" path="/hsp/healthregistertree/dept/detail.jsp" />	
+			<forward name="addDept" path="/hsp/healthregistertree/dept/add.jsp" />
+			<forward name="modifyDept" path="/hsp/healthregistertree/dept/modify.jsp" />
+		</action>
+		<!-- 科室  -->
+		<action path="/hsp/orgMenu" name="orgMenuForm"  scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="init" path="/hsp/department/middle.jsp" />	
+			<forward name="init1" path="/hsp/department/middle.jsp" />
+			<forward name="init2" path="/hsp/department/middlestaff.jsp" />	
+			<forward name="addInit" path="/hsp/department/add.jsp" />	
+			<forward name="detail" path="/hsp/department/detail.jsp" />		
+			<forward name="updataInit" path="/hsp/department/update.jsp" />	
+			<forward name="staffDetail" path="/hsp/department/staffdetail.jsp" />
+			<forward name="staffAddInit" path="/hsp/department/staffadd.jsp" />
+			<forward name="staffUpdateInit" path="/hsp/department/staffupdate.jsp" />	
+			<forward name="query" path="/hsp/department/querymenu.jsp" />	
+			<forward name="querystaff" path="/hsp/department/querystaffmenu.jsp" />	
+		</action>
+		<!-- 卫生设备 -->
+		<action path="/hsp/hspEquipBaseinfo" name="hspEquipBaseinfoForm"  scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="add" path="/hsp/hspequipbaseinfo/add.jsp" />	
+			<forward name="detail" path="/hsp/hspequipbaseinfo/detail.jsp" />		
+			<forward name="update" path="/hsp/hspequipbaseinfo/update.jsp" />	
+			<forward name="query" path="/hsp/hspequipbaseinfo/list.jsp" />	
+			<forward name="query2" path="/hsp/hspequipbaseinfo/list2.jsp" />	
+			<forward name="elsImport" path="/hsp/hspequipbaseinfo/import.jsp" />
+		</action>
+
+  </action-mappings>
+  
+</struts-config>
+

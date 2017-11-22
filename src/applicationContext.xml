@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="BaseTxService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" abstract="true">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="proxyTargetClass" value="true" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="insert*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="save*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="update*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="modify*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="del*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="before*">PROPAGATION_SUPPORTS,-Exception</prop>
+			    <prop key="search*">PROPAGATION_REQUIRED,-Exception</prop>			
+				<prop key="list*">PROPAGATION_SUPPORTS,readOnly,-Exception</prop>
+				<prop key="find*">PROPAGATION_SUPPORTS,readOnly,-Exception</prop>
+				<prop key="get*">PROPAGATION_SUPPORTS,readOnly,-Exception</prop>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.proxool.xml">proxool.xml</prop>
+				<prop key="hibernate.proxool.pool_alias">oraclePool</prop>
+				<prop key="hibernate.bytecode.use_reflection_optimizer">false</prop>
+				<prop key="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+		<list>
+				<value>com/tianjian/comm/bean/CommDictPublicClass.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommDictPublicChar.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommDictPublicInt.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommDictPublicDouble.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommDictPublicLevel.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommTableDateId.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigCountry.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigMaritalStatus.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigNationality.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigRh.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigProfession.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigAbo.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigRelationship.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigDegree.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigIdType.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigSex.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigEmptitle.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigUnittype.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigDept.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigEconkind.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigDepttype.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigUnitgrade.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigStafftype.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigClinicattr.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigLocation.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigCardorg.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigCardtype.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigInputDict.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommGbCoptp.hbm.xml</value>
+				
+				<value>com/tianjian/comm/bean/CommConfigLocationVillage.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigLocationTown.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigLocationGroup.hbm.xml</value>
+				
+				<value>com/tianjian/comm/bean/CommConfigFtManage.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigHospitalType.hbm.xml</value>				
+				<value>com/tianjian/comm/bean/CommConfigDegreeLevel.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigPositiontitle.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigDrugclass.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigDrugform.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigGbDrugclass.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigDrugunits.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigVocation.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigSystemtype.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigSettype.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommWarningSms.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigIcd10.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigTrue.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigYes.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigHave.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommCongihMidwifery.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigPopulationNature.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigHospitalClass.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigNormal.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommIHENameType.hbm.xml</value>
+                <value>com/tianjian/comm/bean/CommIHEFacility.hbm.xml</value>
+                <value>com/tianjian/comm/bean/CommIHEAuthority.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CurrentPriceList.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigDrugfactory.hbm.xml</value>
+				<value>com/tianjian/comm/bean/CommConfigDeptAttr.hbm.xml</value>
+				
+				<!--base Security  start  ,please don't delete -->
+				<value>com/tianjian/security/bean/SecurityStaffBaseinfo.hbm.xml</value>
+				<value>com/tianjian/security/bean/SecurityUserVsRoles.hbm.xml</value>
+				<value>com/tianjian/security/bean/SecuritySystemUsers.hbm.xml</value>
+				<value>com/tianjian/security/bean/SecurityConfigMenus.hbm.xml</value>
+				<value>com/tianjian/security/bean/SecurityConfigPublic.hbm.xml</value>
+				<value>com/tianjian/security/bean/SecurityConfigPublicClass.hbm.xml</value>
+				<value>com/tianjian/security/bean/SecurityConfigRoles.hbm.xml</value>
+				<value>com/tianjian/security/bean/SecurityRoleVsMenus.hbm.xml</value>
+				<value>com/tianjian/security/bean/SecurityLicense.hbm.xml</value>
+				<value>com/tianjian/security/bean/SecurityVersionLicense.hbm.xml</value>
+				<value>com/tianjian/security/bean/SecurityDataObjectType.hbm.xml</value>	
+				<value>com/tianjian/security/bean/SecurityDataObjectVsRoles.hbm.xml</value>	
+				<value>com/tianjian/security/bean/SecurityConfigParamclass.hbm.xml</value>	
+				<value>com/tianjian/security/bean/SecurityConfigParamProject.hbm.xml</value>	
+				<value>com/tianjian/security/bean/SecurityConfigParameter.hbm.xml</value>					
+				<value>com/tianjian/security/bean/SecurityStaffAliveAccess.hbm.xml</value>
+				<value>com/tianjian/security/bean/SecurityXtSysLog.hbm.xml</value>
+				<value>com/tianjian/hsp/bean/HspConfigBaseinfoLocalBase.hbm.xml</value>
+				<value>com/tianjian/hsp/bean/HspStaffBaseinfoLocalBase.hbm.xml</value>
+				<value>com/tianjian/hsp/bean/HspConfigBaseinfo.hbm.xml</value>
+				<value>com/tianjian/hsp/bean/HspDeptBaseinfo.hbm.xml</value>
+				<value>com/tianjian/hsp/bean/HspStaffBaseinfo.hbm.xml</value>
+				<value>com/tianjian/hsp/bean/HspEquipBaseinfo.hbm.xml</value>
+				<value>com/tianjian/hsp/bean/HspLogoutRecord.hbm.xml</value>
+				<value>com/tianjian/hsp/bean/HspMergeLog.hbm.xml</value>
+				<value>com/tianjian/hsp/bean/HspStaffIdList.hbm.xml</value>
+				<value>com/tianjian/hsp/bean/HspStaffLogoutRecord.hbm.xml</value>
+				<value>com/tianjian/hsp/bean/HspStaffMergeLog.hbm.xml</value>
+				<value>com/tianjian/hsp/bean/SecurityIHEPatientIdList.hbm.xml</value>
+				<!--base Security  end  ,please don't delete -->	
+				
+				<value>com/tianjian/tenant/bean/TenantBaseinfo.hbm.xml</value>
+				
+				<value>com/tianjian/empi/bean/SecurityUserBaseinfo.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<!--***********************************************************************************-->
+	<!-- 数据操作bean -->
+	<bean id="coreDao"
+		class="com.tianjian.core.dao.hibernate.CoreDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="actionFormDataListDelService" parent="BaseTxService">
+		<property name="target">
+			<bean
+				class="com.tianjian.core.business.service.ActionFormDataListDelServiceImpl">
+				<property name="dao">
+					<ref bean="coreDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="actionFormDataSaveService" parent="BaseTxService">
+		<property name="target">
+			<bean
+				class="com.tianjian.core.business.service.ActionFormDataSaveServiceImpl">
+				<property name="dao">
+					<ref bean="coreDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!--***********************************************************************************-->
+</beans>

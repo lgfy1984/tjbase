@@ -1,0 +1,100 @@
+.tab_table{
+	/* width: 90%; */
+	margin-left: 2%;
+}
+#jbxx td{
+	width: 12.5%;
+}
+.jbxx_tr_font_right{
+	text-align: right;
+}
+.jbxx_div{
+	width:100%;
+	height:100%;
+	text-align: left;
+	/**border: 1px #0099FF solid;*/
+}
+.tab_div_hide{
+	display: none;
+}
+.tab_gengduo{
+	float: right;
+	margin-right: 3%;
+	color: blue;
+}
+.table_xiahuaxian{
+	border:0;border-collapse:collapse;border-spacing:0;
+}
+#jbxx table tr td{
+	padding-top:10px;
+	padding-bottom:5px;
+}
+#zjzd table tr td{
+	padding-top:3px;
+	padding-bottom:3px;
+	/* border-bottom: 1px #0099FF solid; */
+}
+#zjss table tr td{
+	padding-top:3px;
+	padding-bottom:3px;
+	/* border-bottom: 1px #0099FF solid; */
+}
+#zjyy table tr td{
+	padding-top:3px;
+	padding-bottom:3px;
+	/* border-bottom: 1px #0099FF solid; */
+}
+#jc table tr td{
+	padding-top:3px;
+	padding-bottom:3px;
+	/* border-bottom: 1px #0099FF solid; */
+}
+#jy table tr td{
+	padding-top:3px;
+	padding-bottom:3px;
+	/* border-bottom: 1px #0099FF solid; */
+}
+#fy table tr td{
+	padding-top:3px;
+	padding-bottom:3px;
+	/* border-bottom: 1px #0099FF solid; */
+}
+#tj table tr td{
+	padding-top:3px;
+	padding-bottom:3px;
+	/* border-bottom: 1px #0099FF solid; */
+}
+.tjsjWidth{
+	width: 10%;
+}
+.blue_font_tab{
+	color: blue;
+}
+.span_under_line{
+	border-bottom: 1px blue solid;
+}
+.table_tr_hide{
+	display: none;
+}
+.table_td125 td{
+	width:12.5%;
+	position:relative;
+	vertical-align: top;
+}
+.td_right{
+	text-align: right;
+}
+.table_td25 td{
+	width:25%;
+	position:relative;
+	vertical-align: top;
+}
+.table_td1666 td{
+	width:16.66%;
+	position:relative;
+	vertical-align: top;
+}
+.table_th25 th{
+	width:25%;
+	text-align: center;
+}

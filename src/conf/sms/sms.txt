@@ -1,0 +1,48 @@
+Initial:
+SMS_QUEUE_PRIORITIES=0:高;1:中;2:低
+SMS_QUEUE_DEFUALT_PRIORITIY=1
+
+SMS_QUEUE_QUERYPAGE_TITLE=短信队列表查询
+SMS_QUEUE_ADDPAGE_TITLE=添加短信队列表信息
+SMS_QUEUE_UPDATEPAGE_TITLE=更新短信队列表信息
+SMS_QUEUE_DETAILPAGE_TITLE=短信队列表详细
+-----
+SMS_TRASH_QUERYPAGE_TITLE=短信队列表查询
+SMS_TRASH_DETAILPAGE_TITLE=短信队列表详细
+-----
+SMS_ELEM_CELLPHONE_NUMBER=发送至
+SMS_ELEM_SENDTIME=发送时间
+SMS_ELEM_PRIORITIES=优先级
+SMS_ELEM_SMSCONTENT=短信内容
+SMS_ELEM_COMMENTS=备注
+SMS_ELEM_ABOLISHTIME=作废时间
+
+-----------------------------------------------
+Message:
+SMS_MSG_WRONG_CELLPHONENUMBER=手机号码不正确
+SMS_MSG_CONTENT_LENGTH_LIMIT=短信内容必须在250个字之内
+SMS_MSG_CONTENT_PROMPT=中文是一个字
+SMS_MSG_PRIORITY_MUST_CHOOSEN=必须选定一个优先级
+SMS_MSG_COMMENTS_LENGTH_LIMIT=短信备注必须在20个字之内
+
+-----------------------------------------------
+Action:
+SMS_MSG_SAVE_SUCC=信息保存成功
+SMS_MSG_UPDATE_SUCC=信息更新成功
+SMS_MSG_DELETE_SUCC=信息删除成功
+
+-----------------------------------------------
+菜单调整，在CEHRP库（cehrp2012年12月28日18点09分21秒.rar）里开始
+--删除原短信管理模块
+delete from security_config_public_class t where t.id='2c90a2372e4ffea0012e50a6858e0034';
+--在综合管理下新加短信管理
+insert into security_config_public_class (ID, CLASS_CODE, CLASS_NAME, INPUT_CODE, COMMENTS, PARENT_ID, LEVEL_FLAG, SERIAL_NO, PIC_PATH, SYS_FLAG, REDIRECT_URL, APP_SYS_FLAG, CLASS_FLAG)
+values ('4028a1813ae52ea4013ae531ccab0002', '21598', '短信管理', 'DXGL', '短信管理', '402881e5375eb63801375f4caa880007', 2, 21599, 'pub2_wszc.png', 1, '', 1, 1);
+--将原来的短信管理模块下的子模块转到新的短信管理下
+update security_config_public t set t.scpc_id='4028a1813ae52ea4013ae531ccab0002' where t.scpc_id='2c90a2372e4ffea0012e50a6858e0034';
+--在转移过来的业务管理子模块下追加发送队列和废件箱
+insert into security_config_menus (ID, SECURITY_CONFIG_PUBLIC_ID, MENU_CODE, PARENT_ID, MENU_DETAIL, MENU_NOTICE, MENU_URL, END_LEVEL_FLAG, MENU_LEVEL, MENU_SEQ, MENU_ICON, MENU_DATA, MENU_TARGET, MENU_METHOD, COMMENTS, SERIAL_NO, INPUT_CODE, DISPLAY_TYPE, MENU_TYPE)
+values ('2109113001', '2c90a2372e55598a012e57a59539001c', '2109113001', '', '发送队列', '发送队列', 'sms/queue.do?verbId=query', 1, 0, 0, '', '', '', '', '发送队列', 1751020344, 'FSDL', 0, 0);
+
+insert into security_config_menus (ID, SECURITY_CONFIG_PUBLIC_ID, MENU_CODE, PARENT_ID, MENU_DETAIL, MENU_NOTICE, MENU_URL, END_LEVEL_FLAG, MENU_LEVEL, MENU_SEQ, MENU_ICON, MENU_DATA, MENU_TARGET, MENU_METHOD, COMMENTS, SERIAL_NO, INPUT_CODE, DISPLAY_TYPE, MENU_TYPE)
+values ('2109113002', '2c90a2372e55598a012e57a59539001c', '2109113002', '', '废件箱', '废件箱', 'sms/trash.do?verbId=query', 1, 0, 0, '', '', '', '', '', 1751020345, 'FJX', null, 0);

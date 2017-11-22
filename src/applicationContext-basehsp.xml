@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!--**********************hspConfigBaseinfo***********************start*************************-->
+	<bean name="/hsp/hspConfigBaseinfo" class="com.tianjian.hsp.struts.action.HspConfigBaseinfoAction">
+		<property name="service">
+			<ref bean="HspConfigBaseinfoService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>
+	</bean>
+	<!--卫生机构注销记录-->
+	<bean name="/hsp/hspLogoutRecord" class="com.tianjian.hsp.struts.action.HspLogoutRecordAction" singleton="false">
+		<property name="service">
+			<ref local="HspConfigBaseinfoService" />
+		</property>
+		<property name="hspLogoutRecordService">
+			<ref local="hspLogoutRecordServiceImpl" />
+		</property>
+	</bean>
+	<bean id="hspLogoutRecordServiceImpl" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.hsp.business.service.HspLogoutRecordServiceImpl">
+			    <property name="hspConfigBaseinfoDAO">
+					<ref bean="HspConfigBaseinfoDAO"/>
+				</property>
+				<property name="hspLogoutRecordDAO">
+					<ref bean="HspLogoutRecordDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="HspLogoutRecordDAO" class="com.tianjian.hsp.dao.hibernate.HspLogoutRecordDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--卫生人力基本信息-->
+	<bean name="/hsp/hspStaffBaseinfo" class="com.tianjian.hsp.struts.action.HspStaffBaseinfoAction" singleton="false">
+		<property name="hspStaffBaseinfoService">
+			<ref local="hspStaffBaseinfoServiceImpl" />
+		</property>
+		<property name="checkRoleCodeService">
+			<ref local="checkRoleCodeServiceImpl" />
+		</property>
+	</bean>
+	<bean id="checkRoleCodeServiceImpl" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.security.business.service.CheckRoleCodeServiceImpl">
+			    <property name="checkRoleCodeDAO">
+					<ref bean="checkRoleCodeDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="checkRoleCodeDAO" class="com.tianjian.security.dao.hibernate.CheckRoleCodeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--卫生人员注销记录-->
+	<bean name="/hsp/hspStaffLogoutRecord" class="com.tianjian.hsp.struts.action.HspStaffLogoutRecordAction" singleton="false">
+		<property name="hspStaffBaseinfoService">
+			<ref local="hspStaffBaseinfoServiceImpl" />
+		</property>
+		<property name="hspStaffLogoutRecordService">
+			<ref local="hspStaffLogoutRecordServiceImpl" />
+		</property>
+		<property name="checkRoleCodeService">
+			<ref local="checkRoleCodeServiceImpl"/>
+		</property>
+	</bean>
+	<bean id="hspStaffLogoutRecordServiceImpl" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.hsp.business.service.HspStaffLogoutRecordServiceImpl">
+			    <property name="hspStaffBaseinfoDAO">
+					<ref bean="HspStaffBaseinfoDAO"/>
+				</property>
+				<property name="hspStaffLogoutRecordDAO">
+					<ref bean="HspStaffLogoutRecordDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="HspStaffLogoutRecordDAO" class="com.tianjian.hsp.dao.hibernate.HspStaffLogoutRecordDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="hspStaffBaseinfoServiceImpl" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.hsp.business.service.HspStaffBaseinfoServiceImpl">				
+				<property name="hspStaffBaseinfoDAO">
+					<ref bean="HspStaffBaseinfoDAO"/>
+				</property>
+				<property name="securityStaffBaseinfoDAO">
+					<ref bean="securityStaffBaseinfoDAO"/>
+				</property>
+				<property name="hspConfigBaseinfoDAO">
+					<ref bean="HspConfigBaseinfoDAO"/>
+				</property>
+        		 <property name="commConfigInputDictService">
+             		 <ref bean="CommConfigInputDictService" />
+        		</property>
+        		<property name="securityLicenseDAO">
+					<ref local="SecurityLicenseDAO"/>
+				</property>	
+        		<property name="commonDAO">
+					<ref bean="CommonDAO"/>
+				</property>	
+				<property name="securitySystemUsersDAO">
+					<ref bean="securitySystemUsersRegistDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="securitySystemUsersRegistDAO" class="com.tianjian.security.dao.hibernate.SecuritySystemUsersDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>	
+	<bean id="HspStaffBaseinfoDAO" class="com.tianjian.hsp.dao.hibernate.HspStaffBaseinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="HspConfigBaseinfoService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.hsp.business.service.HspConfigBaseinfoServiceImpl">
+				<property name="hspConfigBaseinfoDAO">
+					<ref bean="HspConfigBaseinfoDAO" />
+				</property>
+				<property name="commConfigUnittypeDAO">
+					<ref bean="CommConfigUnittypeDAO" />
+				</property>
+				<property name="commConfigUnitgradeDAO">
+					<ref bean="CommConfigUnitgradeDAO" />
+				</property>
+				<property name="commConfigEconkindDAO">
+					<ref bean="CommConfigEconkindDAO" />
+				</property>
+				<property name="commConfigLocationDAO">
+					<ref bean="CommConfigLocationDAO" />
+				</property>
+			   <property name="hspStaffBaseinfoDAO">
+					<ref bean="HspStaffBaseinfoDAO"/>
+				</property>
+				<property name="commonDAO">
+					<ref bean="CommonDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="HspConfigBaseinfoDAO" class="com.tianjian.hsp.dao.hibernate.HspConfigBaseinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SecurityLicenseDAO" class="com.tianjian.security.dao.hibernate.SecurityLicenseDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--卫生人力合并-->
+	<bean name="/hsp/hspStaffBaseinfoMerge" class="com.tianjian.hsp.struts.action.HspStaffBaseinfoMergeAction" singleton="false">
+		<property name="hspStaffBaseinfoMerge">
+			<ref local="hspStaffBaseinfoMergeServiceImpl" />
+		</property>
+	</bean>
+	<bean id="hspStaffBaseinfoMergeServiceImpl" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.hsp.business.service.HspStaffBaseinfoMergeServiceImpl">
+			    <property name="hspStaffBaseinfoMergeDAO">
+					<ref bean="HspStaffBaseinfoMergeDAO"/>
+				</property>
+				<property name="securityStaffBaseinfoDAO">
+					<ref bean="securityStaffBaseinfoDAO"/>
+				</property>
+				<property name="commConfigSexDAO">
+					<ref bean="CommConfigSexDAO"/>
+				</property>
+				<property name="securityLicenseDAO">
+					<ref bean="SecurityLicenseDAO"/>
+				</property>
+				<property name="hspStaffBaseinfoDAO">
+					<ref bean="HspStaffBaseinfoDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="securityStaffBaseinfoDAO" class="com.tianjian.security.dao.hibernate.SecurityStaffBaseinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="HspStaffBaseinfoMergeDAO" class="com.tianjian.hsp.dao.hibernate.HspStaffBaseinfoMergeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--卫生机构合并-->
+	<bean name="/hsp/hspConfigBaseinfoMerge" class="com.tianjian.hsp.struts.action.HspConfigBaseinfoMergeAction" singleton="false">
+		<property name="hspConfigBaseinfoMerge">
+			<ref local="hspConfigBaseinfoMergeServiceImpl" />
+		</property>
+	</bean>
+	<bean id="hspConfigBaseinfoMergeServiceImpl" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.hsp.business.service.HspConfigBaseinfoMergeServiceImpl">
+			    <property name="hspConfigBaseinfoMergeDAO">
+					<ref bean="HspConfigBaseinfoMergeDAO"/>
+				</property>
+				<property name="hspConfigBaseinfoDAO">
+					<ref bean="HspConfigBaseinfoDAO"/>
+				</property>
+				<property name="commConfigLocationDAO">
+					<ref bean="CommConfigLocationDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="HspConfigBaseinfoMergeDAO" class="com.tianjian.hsp.dao.hibernate.HspConfigBaseinfoMergeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 卫生注册树状图 -->
+	<bean name="/hsp/healthRegisterTree" class="com.tianjian.hsp.struts.action.HealthRegisterTreeAction" singleton="false">
+		<property name="healthRegisterTreeService">
+			<ref local="healthRegisterTreeService" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>		
+	</bean>
+	<bean id="healthRegisterTreeService" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.hsp.business.service.HealthRegisterTreeServiceImpl">
+				<property name="healthRegisterTreeDAO">
+					<ref bean="healthRegisterTreeDAO"/>
+				</property>
+		        <property name="commonDAO">
+					<ref bean="CommonDAO"/>
+				</property>	
+				<property name="commConfigInputDictService">
+             		 <ref bean="CommConfigInputDictService" />
+        		</property>
+        		<property name="securityLicenseDAO">
+					<ref local="SecurityLicenseDAO"/>
+				</property>	
+				<property name="securityStaffBaseinfoDAO">
+					<ref bean="securityStaffBaseinfoDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="healthRegisterTreeDAO" class="com.tianjian.hsp.dao.hibernate.HealthRegisterTreeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 科室 -->
+	<bean name="/hsp/orgMenu" class="com.tianjian.hsp.struts.action.OrgMenuAction" singleton="false">
+		<property name="orgMenuService">
+			<ref local="orgMenuServiceImpl" />
+		</property>
+		<property name="commConfigInputDictService">
+			<ref bean="CommConfigInputDictService" />
+		</property>		
+	</bean>
+	<bean id="orgMenuServiceImpl" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.hsp.business.service.OrgMenuServiceImpl">
+			    <property name="hspConfigBaseinfoDAO">
+					<ref bean="HspConfigBaseinfoDAO"/>
+				</property>
+				<property name="orgMenuDao">
+					<ref bean="OrgMenuDao"/>
+				</property>
+				<property name="hspStaffBaseinfoDAO">
+			       <ref bean="HspStaffBaseinfoDAO"/>
+		        </property>
+		        <property name="commonDAO">
+					<ref bean="CommonDAO"/>
+				</property>	
+				<property name="commConfigInputDictService">
+             		 <ref bean="CommConfigInputDictService" />
+        		</property>
+        		<property name="securityLicenseDAO">
+					<ref local="SecurityLicenseDAO"/>
+				</property>	
+				<property name="securityStaffBaseinfoDAO">
+					<ref bean="securityStaffBaseinfoDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="OrgMenuDao" class="com.tianjian.hsp.dao.hibernate.OrgMenuDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 卫生设备 -->
+	<bean name="/hsp/hspEquipBaseinfo" class="com.tianjian.hsp.struts.action.HspEquipBaseinfoAction" singleton="false">
+		<property name="hspEquipBaseinfoService">
+			<ref local="hspEquipBaseinfoServiceImpl" />
+		</property>
+	</bean>
+	<bean id="hspEquipBaseinfoServiceImpl" parent="BaseTxService">
+		<property name="target">
+			<bean class="com.tianjian.hsp.business.service.HspEquipBaseinfoServiceImpl">
+				<property name="orgMenuDao">
+					<ref bean="OrgMenuDao"/>
+				</property>
+				<property name="hspEquipBaseinfoDAO">
+			       <ref bean="HspEquipBaseinfoDAO"/>
+		        </property>
+		        <property name="commonDAO">
+					<ref bean="CommonDAO"/>
+				</property>	
+			</bean>
+		</property>
+	</bean>
+	<bean id="HspEquipBaseinfoDAO" class="com.tianjian.hsp.dao.hibernate.HspEquipBaseinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+</beans>

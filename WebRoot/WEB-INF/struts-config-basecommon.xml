@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+  <data-sources />
+  <form-beans >
+     <!-- COMM_CONFIG_COUNTRY国家字典 -->
+    <form-bean name="commConfigCountryForm" type="com.tianjian.comm.struts.form.CommConfigCountryForm" />
+    <!-- COMM_CONFIG_LOCATION_TOWN乡镇字典 -->
+	<form-bean name="commConfigLocationTown" type="com.tianjian.comm.struts.form.CommConfigLocationTownForm" />
+	<!-- COMM_CONFIG_LOCATION_VILLAGE村字典 -->
+	<form-bean name="commConfigLocationVillage" type="com.tianjian.comm.struts.form.CommConfigLocationVillageForm" />
+	<!-- COMM_CONFIG_LOCATION_GROUP居民组字典 -->
+	<form-bean name="commConfigLocationGroup" type="com.tianjian.comm.struts.form.CommConfigLocationGroupForm" />
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >     
+	<!-- *******************************dss部分开始************************************ -->
+	<action path="/olap"  type="com.tianjian.common.dss.struts.action.OlapAction" scope="request">
+  			<forward name="index" path="/dss/index.jsp"></forward>
+  			<forward name="olap" path="/dss/olap.jsp"></forward>
+  		</action>
+	<!-- *******************************dss部分开始************************************ -->
+	
+	<!-- *******************************国家字典开始************************************ -->
+    	<action path="/comm/commConfigCountry" name="commConfigCountryForm" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commconfigcountry/list.jsp" />
+			<forward name="add" path="/comm/commconfigcountry/add.jsp" />
+			<forward name="update" path="/comm/commconfigcountry/update.jsp" />
+			<forward name="detail" path="/comm/commconfigcountry/detail.jsp" />
+			<forward name="fail" path="/include/error/fail.jsp" />
+			<forward name="noLogin" path="/home/nologin.jsp" />
+			<forward name="queryDetail" path="/comm/commconfigcountry/listdetail.jsp" />
+		</action>
+   	 <!-- *******************************国家字典结束************************************ -->
+   	    <!-- COMM_CONFIG_LOCATION_TOWN乡镇字典 -->
+		<action path="/comm/commConfigLocationTown" name="commConfigLocationTown" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commConfigLocationTown/list.jsp" />
+			<forward name="add" path="/comm/commConfigLocationTown/add.jsp" />
+			<forward name="update" path="/comm/commConfigLocationTown/update.jsp" />
+			<forward name="detail" path="/comm/commConfigLocationTown/detail.jsp" />
+		</action>
+		<!-- COMM_CONFIG_LOCATION_VILLAGE村字典 -->
+		<action path="/comm/commConfigLocationVillage" name="commConfigLocationVillage" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commConfigLocationVillage/list.jsp" />
+			<forward name="add" path="/comm/commConfigLocationVillage/add.jsp" />
+			<forward name="update" path="/comm/commConfigLocationVillage/update.jsp" />
+			<forward name="detail" path="/comm/commConfigLocationVillage/detail.jsp" />
+		</action>
+		<!-- COMM_CONFIG_LOCATION_GROUP居民组字典 -->
+		<action path="/comm/commConfigLocationGroup" name="commConfigLocationGroup" scope="request" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="query" path="/comm/commConfigLocationGroup/list.jsp" />
+			<forward name="add" path="/comm/commConfigLocationGroup/add.jsp" />
+			<forward name="update" path="/comm/commConfigLocationGroup/update.jsp" />
+			<forward name="detail" path="/comm/commConfigLocationGroup/detail.jsp" />
+		</action>
+  </action-mappings>
+  
+</struts-config>
+

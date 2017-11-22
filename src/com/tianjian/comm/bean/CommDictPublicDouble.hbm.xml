@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.tianjian.comm.bean.CommDictPublicDouble" table="COMM_DICT_PUBLIC_DOUBLE" >
+		<id name="id" type="java.lang.String" column="ID" length="32">
+			<generator class="uuid.hex" />
+		</id>
+		<!--字典类别ID-->
+		<many-to-one name="classCodeObject" class="com.tianjian.comm.bean.CommDictPublicClass" column="CLASS_CODE" insert="false" update="false"/>
+		<property name="classCode" type="java.lang.String" column="CLASS_CODE" length="32" />
+		<!--字典代码-->
+		<property name="dictCode" type="java.lang.String" column="DICT_CODE" length="20" />
+		<!--字典名称-->
+		<property name="dictValue" type="java.lang.Double" column="DICT_VALUE" precision="16" scale="4" />
+		<!--输入码-->
+		<property name="inputCode" type="java.lang.String" column="INPUT_CODE" length="8" />
+		<!--备注-->
+		<property name="comments" type="java.lang.String" column="COMMENTS" length="100" />
+		<!--序号-->
+		<property name="seqNo" type="java.lang.Long" column="SEQ_NO" precision="11" scale="0" />
+	</class>
+</hibernate-mapping>
